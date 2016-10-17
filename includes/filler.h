@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/16 16:59:05 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/17 12:25:24 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 typedef struct	s_p
 {
-	int		i;
-	int		j;
-	int		n;
-	int		m;
+	int		line_map;
+	int		line_piece;
+	int		col_map;
+	int		col_piece;
 	int		nb;
 	int		piece;
 	int		*ret;
@@ -33,7 +33,7 @@ typedef struct	s_p
 //void
 // void		error();
 void		init_struct_p(t_p *p);
-// void		ft_map_size(char *line, t_p *p);
+void		ft_map_size(char *line, t_p *p);
 // void		ft_piece_size(char *line, t_p *p);
 // void		ft_stock_piece(char *line, t_p *p, int i);
 // void		ft_stock_map(char *line, t_p *p);
@@ -42,7 +42,7 @@ void		init_struct_p(t_p *p);
 // void		tab_put(t_p *p);
 
 //int
-// int			game_player(char *line, t_p *p);
+int			game_player(char *line, t_p *p);
 
 
 #endif
