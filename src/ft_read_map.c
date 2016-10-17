@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/17 11:13:13 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/17 17:12:25 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ void	ft_map_size(char *line, t_p *p)
 	int j;
 
 	j = 8;
-	p->col_map = ft_atoi(line + 8);
+	p->line_map = ft_atoi(line + 8);
 	// dprintf(2, "\n\n%d\n", p->i);
 	while (line[j] >= '0' && line[j] <= '9')
 		j++;
-	p->line_map = ft_atoi(line + j);
+	p->col_map = ft_atoi(line + j);
 	// dprintf(2, "\n\n%d\n", p->j);
 }
 
@@ -67,10 +67,50 @@ void	ft_piece_size(char *line, t_p *p)
 	j = 6;
 	if (ft_strncmp(line, "Piece", 5) == 0)
 	{
-		p->col_piece = ft_atoi(line + 6);
+		p->line_piece = ft_atoi(line + 6);
 		while (line[j] >= '0' && line[j] <= '9')
 			j++;
-		p->line_piece  = ft_atoi(line + j);
+		p->col_piece  = ft_atoi(line + j);
 		p->piece = j;
 	}
+}
+
+void	ft_stock_map(char *line, t_p *p)
+{
+	int i;
+
+	i = 0;
+	while ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
+		i++;
+	if (ft_strncmp(line, "Piece", 5) != 0)
+		p->line = ft_strjoin(ft_strsub(line, i, ft_strlen(line) - i), "\n");
+	// dprintf(2, "\np->line\n%s\n", p->line);
+}
+
+void	ft_stock_piece(char *line, t_p *p, int i)
+{
+	int j;
+
+	j = 0;
+	// if (p->col_piece > p->col_map || p->line_piece > p->line_map)
+	// 	error();
+	if (p->piece > 0 && p->piece < i && (line[0] == '.' || line[0] == '*')) // p->piece < i ?
+	{
+		p->ptr = ft_strjoin(line, "\n");
+		while (line[j] != '\0')
+		{
+			if (line[j] == '*')
+			{
+				p->nb++;
+			}
+			j++;
+		}
+		dprintf(2, "\np->ptr\n%s", p->ptr);
+	}
+	// if (p->piece > 0 && p->piece < i && (line[0] != '.' || line[0] != '*'))
+	// {
+	// 	tab_init(p);
+	// 	tab_put(p);
+	//
+	// }
 }
