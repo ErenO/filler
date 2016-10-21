@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/17 16:54:58 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/21 15:35:21 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int main(void)
 			ft_map_size(line, p);
 		if (i > 2)
 		{
-			ft_piece_size(line, p);
+			ft_piece_big_size(line, p);
+			// ft_piece_form_size(p);
 			ft_stock_map(line, p);
 			// ft_piece_size(line, p);
 			ft_stock_piece(line, p, i);
@@ -43,6 +44,7 @@ int main(void)
 		i++;
 		j = 0;
 	}
+	dprintf(2,"\np->line\n%s\np->ptr\n%s\n\n", p->line, p->ptr);
 	free(p);
 	return (0);
 }
