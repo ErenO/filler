@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 16:25:19 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/21 20:08:24 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,13 +107,15 @@ void	ft_stock_piece(char *line, t_p *p, int i)
 	j = 0;
 	// if (p->col_piece > p->col_map || p->line_piece > p->line_map)
 	// 	error();
-	if (p->check_map)
+	// dprintf(2, "\n\n");
+	if (p->check_map == 1)
 	{
 		p->piece_size--;
+		// dprintf(2, "\nbonjour\n");
 	}
-	if (p->piece_size == 0)
+	if (p->piece_size == 0 && p->check_map == 1)
 	{
-		// p->check_map = 0;
+		p->check_map = 0;
 		ft_find_out_place(p);
 	}
 	if (p->piece > 0 && p->piece < i && (line[0] == '.' || line[0] == '*')) // p->piece < i ?

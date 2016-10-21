@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 16:25:20 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/21 20:51:51 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,38 +60,60 @@ int	ft_check_piece(t_p *p, int line, int column)
 	int count;
 	int map_place;
 	int piece_place;
+	int m;
 
+	m = 0;
 	i = 0;
 	count = 0;
 	map_place = 0;
 	piece_place = 0;
+	// dprintf(2, "\nhello\n");
 	while (i < p->line_piece && (i + p->line_piece) < p->line_map)
 	{
 		j = 0;
-		while (j < p->col_piece)
+		map_place = column + ((p->line_map + 1) * (line + i));
+		piece_place = column + ((p->line_piece + 1) * i);
+		while (j < p->col_piece && p->line[map_place] != 0)
 		{
-			map_place = j + column + ((p->line_map + 1) * (line + i));
-			piece_place = j + column + ((p->line_piece + 1) * i);
-			if (p->line[map_place] == p->ch && p->ptr[piece_place] == '*')
+			if (p->line[map_place] == p->ch)
 			{
+				dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|\n", p->line[map_place], map_place);
 				count++;
 			}
+
 			if ((j + p->col_piece) > p->col_map && p->ptr[piece_place] == '*')
 			{
+				dprintf(2, "\n2\n");
 				return (0);
 			}
-			if (p->line[map_place] != p->ch || p->line[map_place] != '.')
+			if (p->line[map_place] != p->ch && p->line[map_place] != '.' && p->line[map_place] != '\n')
 			{
+				dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|\n", p->line[map_place], map_place);
 				return (0);
 			}
+			map_place++;
+			piece_place++;
 			j++;
+			m++;
 		}
+		// dprintf(2, "NONNNN");
 		i++;
 	}
-	return (count == 1) ? 1 : 0;
+	// dprintf(2, "\nm:%d\n", m);
+	if (count == 1)
+	{
+		dprintf(2, "\n\n");
+		return (1);
+	}
+	else
+	{
+		dprintf(2, "\nOUIIIII%d\n", count);
+		return (0);
+	}
+	// return (count == 1) ? 1 : 0;
 }
 
-int ft_find_out_place(t_p *p)
+int	ft_find_out_place(t_p *p)
 {
 	int i;
 	int j;
@@ -99,17 +121,19 @@ int ft_find_out_place(t_p *p)
 
 	i = 0;
 	valid = 0;
+	// dprintf(2, "\nhello\n");
 	while (i < p->line_map)
 	{
 		j = 0;
 		while (j < p->col_map)
 		{
-			if ((valid = ft_check_piece(p, j, i)))
+			if (ft_check_piece(p, j, i))
 			{
-				ft_putnbr(j);
-				ft_putchar(' ');
-				ft_putnbr(i);
-				ft_putchar('\n');
+				dprintf(2, "\nX : %d, Y : %d\n", j, i);
+				// ft_putnbr(j);
+				// ft_putchar(' ');
+				// ft_putnbr(i);
+				// ft_putchar('\n');
 				return (1);
 			}
 			j++;

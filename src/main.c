@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 15:35:21 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/21 18:34:47 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ int main(void)
 	while (get_next_line(0, &line) == 1)
 	{
 		if (i == 0)
+		{
 			game_player(line, p);
+			dprintf(2, "\np->ch: %c\n", p->ch);
+		}
 		if (i == 1)
 			ft_map_size(line, p);
 		if (i > 2)
