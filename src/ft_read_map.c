@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/23 22:07:31 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/23 23:09:01 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,18 +148,22 @@ void	ft_stock_piece(char *line, t_p *p, int i)
 		// dprintf(2, "piece length %zu\n", ft_strlen(p->ptr));
 		// while (1)
 		// {
-		dprintf(2, "tomorrow\n");
-
-			p->ptr = ft_strjoin(p->ptr, ft_strjoin(line, "\n"));
-			ret = ft_find_out_place(p);
-			if (ret == 1)
-			{
-				p->check_map = 3;
-				p->line = NULL;
-				p->ptr = NULL;
+		if (p->ptr == NULL)
+		{
+			p->ptr = ft_strnew(0);
+		}
+		p->ptr = ft_strjoin(p->ptr, ft_strjoin(line, "\n"));
+		dprintf(2, "p->ptr: %s line: %s\n", p->ptr, line);
+		ret = ft_find_out_place(p);
+		if (ret == 1)
+		{
+			p->check_map = 3;
+			// p->line = NULL;
+			// p->ptr = NULL;
 				// break ;
 			}
 		// }
+		dprintf(2, "tomorrow\n");
 	}
 	// dprintf(2, "\np->piece_size: %d\np->check_map: %d\np->line_piece: %d\n", p->piece_size, p->check_map, p->line_piece);
 	// if (p->piece > 0 && p->piece < i && (line[0] != '.' || line[0] != '*'))

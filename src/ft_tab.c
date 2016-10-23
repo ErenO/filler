@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/23 21:50:56 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/23 23:11:41 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		ft_check_piece(t_p *p, int line, int column)
 	count = 0;
 	map_place = 0;
 	piece_place = 0;
-	// dprintf(2, "\nhello\n");
+	// dprintf(2, "A");
 	// dprintf(2, "\nX : %d, Y : %d, long : %d, \npiece line: %d, col_piece %d", column, line, p->col_map, line, p->col_piece);
 	// dprintf(2, "p->ptr\n%s\n", p->ptr);
 	while (i < p->line_piece && (i + p->line_piece) < p->line_map)
@@ -100,6 +100,7 @@ int		ft_check_piece(t_p *p, int line, int column)
 		// dprintf(2, "NONNNN");
 		i++;
 	}
+	// dprintf(2, "B\n");
 	// dprintf(2, "\nm:%d\n", m);
 	if (count == 1)
 	{
@@ -126,6 +127,7 @@ int	ft_find_out_place(t_p *p)
 	valid = 0;
 	ret = 0;
 	// dprintf(2, "\nhello\n");
+
 	while (i < p->line_map)
 	{
 		j = 0;
@@ -140,7 +142,9 @@ int	ft_find_out_place(t_p *p)
 				ft_putnbr(j);
 				ft_putchar('\n');
 				p->ptr = NULL;
+				p->ptr = ft_strnew(0);
 				p->line = NULL;
+				p->line = ft_strnew(0);
 				return (1);
 			}
 			else if (ret == 2)

@@ -1,6 +1,5 @@
-seed = 2612
-X: error on input
-./filler: Segfault at 1
+seed = 688
+X: timedout
 ./players/carli.filler won
 Score:
-164AGAINST1
+176AGAINST1
