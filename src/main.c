@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 18:34:47 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/23 09:13:13 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int main(void)
 		i++;
 		j = 0;
 	}
+	ft_find_out_place(p);
 	dprintf(2,"\np->line\n%s\np->ptr\n%s\n\n", p->line, p->ptr);
 	free(p);
 	return (0);

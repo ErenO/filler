@@ -18,212 +18,1491 @@ Plateau 15 17:
 012 ..............X..
 013 .................
 014 .................
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-p->line[map_place]: |79|, map_place: |146|
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-p->line[map_place]: |79|, map_place: |146|
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-p->line[map_place]: |79|, map_place: |164|
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-p->line[map_place]: |79|, map_place: |164|
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-OUIIIII0
-
-p->line[map_place]: |88|, map_place: |230|
-
-
+Piece 2 1:
+*
+*
+
+X : 0, Y : 0
+.mapplace 0, p->line_map 15, line 0, i 0, column 0
+EOF
+.mapplace 15, p->line_map 15, line 0, i 1, column 0
+EOF
+
+X : 1, Y : 0
+.mapplace 1, p->line_map 15, line 1, i 0, column 0
+EOF
+.mapplace 16, p->line_map 15, line 1, i 1, column 0
+EOF
+
+X : 2, Y : 0
+.mapplace 2, p->line_map 15, line 2, i 0, column 0
+EOF
+
+mapplace 17, p->line_map 15, line 2, i 1, column 0
+EOF
+
+X : 3, Y : 0
+.mapplace 3, p->line_map 15, line 3, i 0, column 0
+EOF
+.mapplace 18, p->line_map 15, line 3, i 1, column 0
+EOF
+
+X : 4, Y : 0
+.mapplace 4, p->line_map 15, line 4, i 0, column 0
+EOF
+.mapplace 19, p->line_map 15, line 4, i 1, column 0
+EOF
+
+X : 5, Y : 0
+.mapplace 5, p->line_map 15, line 5, i 0, column 0
+EOF
+.mapplace 20, p->line_map 15, line 5, i 1, column 0
+EOF
+
+X : 6, Y : 0
+.mapplace 6, p->line_map 15, line 6, i 0, column 0
+EOF
+.mapplace 21, p->line_map 15, line 6, i 1, column 0
+EOF
+
+X : 7, Y : 0
+.mapplace 7, p->line_map 15, line 7, i 0, column 0
+EOF
+.mapplace 22, p->line_map 15, line 7, i 1, column 0
+EOF
+
+X : 8, Y : 0
+.mapplace 8, p->line_map 15, line 8, i 0, column 0
+EOF
+.mapplace 23, p->line_map 15, line 8, i 1, column 0
+EOF
+
+X : 9, Y : 0
+.mapplace 9, p->line_map 15, line 9, i 0, column 0
+EOF
+.mapplace 24, p->line_map 15, line 9, i 1, column 0
+EOF
+
+X : 10, Y : 0
+.mapplace 10, p->line_map 15, line 10, i 0, column 0
+EOF
+.mapplace 25, p->line_map 15, line 10, i 1, column 0
+EOF
+
+X : 11, Y : 0
+.mapplace 11, p->line_map 15, line 11, i 0, column 0
+EOF
+.mapplace 26, p->line_map 15, line 11, i 1, column 0
+EOF
+
+X : 12, Y : 0
+.mapplace 12, p->line_map 15, line 12, i 0, column 0
+EOF
+.mapplace 27, p->line_map 15, line 12, i 1, column 0
+EOF
+
+X : 13, Y : 0
+.mapplace 13, p->line_map 15, line 13, i 0, column 0
+EOF
+.mapplace 28, p->line_map 15, line 13, i 1, column 0
+EOF
+
+X : 14, Y : 0
+.mapplace 14, p->line_map 15, line 14, i 0, column 0
+EOF
+.mapplace 29, p->line_map 15, line 14, i 1, column 0
+EOF
+
+X : 15, Y : 0
+.mapplace 15, p->line_map 15, line 15, i 0, column 0
+EOF
+.mapplace 30, p->line_map 15, line 15, i 1, column 0
+EOF
+
+X : 16, Y : 0
+.mapplace 16, p->line_map 15, line 16, i 0, column 0
+EOF
+.mapplace 31, p->line_map 15, line 16, i 1, column 0
+EOF
+
+X : 0, Y : 1
+.mapplace 15, p->line_map 15, line 0, i 0, column 1
+EOF
+.mapplace 30, p->line_map 15, line 0, i 1, column 1
+EOF
+
+X : 1, Y : 1
+.mapplace 16, p->line_map 15, line 1, i 0, column 1
+EOF
+.mapplace 31, p->line_map 15, line 1, i 1, column 1
+EOF
+
+X : 2, Y : 1
+
+mapplace 17, p->line_map 15, line 2, i 0, column 1
+EOF
+.mapplace 32, p->line_map 15, line 2, i 1, column 1
+EOF
+
+X : 3, Y : 1
+.mapplace 18, p->line_map 15, line 3, i 0, column 1
+EOF
+.mapplace 33, p->line_map 15, line 3, i 1, column 1
+EOF
+
+X : 4, Y : 1
+.mapplace 19, p->line_map 15, line 4, i 0, column 1
+EOF
+.mapplace 34, p->line_map 15, line 4, i 1, column 1
+EOF
+
+X : 5, Y : 1
+.mapplace 20, p->line_map 15, line 5, i 0, column 1
+EOF
+
+mapplace 35, p->line_map 15, line 5, i 1, column 1
+EOF
+
+X : 6, Y : 1
+.mapplace 21, p->line_map 15, line 6, i 0, column 1
+EOF
+.mapplace 36, p->line_map 15, line 6, i 1, column 1
+EOF
+
+X : 7, Y : 1
+.mapplace 22, p->line_map 15, line 7, i 0, column 1
+EOF
+.mapplace 37, p->line_map 15, line 7, i 1, column 1
+EOF
+
+X : 8, Y : 1
+.mapplace 23, p->line_map 15, line 8, i 0, column 1
+EOF
+.mapplace 38, p->line_map 15, line 8, i 1, column 1
+EOF
+
+X : 9, Y : 1
+.mapplace 24, p->line_map 15, line 9, i 0, column 1
+EOF
+.mapplace 39, p->line_map 15, line 9, i 1, column 1
+EOF
+
+X : 10, Y : 1
+.mapplace 25, p->line_map 15, line 10, i 0, column 1
+EOF
+.mapplace 40, p->line_map 15, line 10, i 1, column 1
+EOF
+
+X : 11, Y : 1
+.mapplace 26, p->line_map 15, line 11, i 0, column 1
+EOF
+.mapplace 41, p->line_map 15, line 11, i 1, column 1
+EOF
+
+X : 12, Y : 1
+.mapplace 27, p->line_map 15, line 12, i 0, column 1
+EOF
+.mapplace 42, p->line_map 15, line 12, i 1, column 1
+EOF
+
+X : 13, Y : 1
+.mapplace 28, p->line_map 15, line 13, i 0, column 1
+EOF
+.mapplace 43, p->line_map 15, line 13, i 1, column 1
+EOF
+
+X : 14, Y : 1
+.mapplace 29, p->line_map 15, line 14, i 0, column 1
+EOF
+.mapplace 44, p->line_map 15, line 14, i 1, column 1
+EOF
+
+X : 15, Y : 1
+.mapplace 30, p->line_map 15, line 15, i 0, column 1
+EOF
+.mapplace 45, p->line_map 15, line 15, i 1, column 1
+EOF
+
+X : 16, Y : 1
+.mapplace 31, p->line_map 15, line 16, i 0, column 1
+EOF
+.mapplace 46, p->line_map 15, line 16, i 1, column 1
+EOF
+
+X : 0, Y : 2
+.mapplace 30, p->line_map 15, line 0, i 0, column 2
+EOF
+.mapplace 45, p->line_map 15, line 0, i 1, column 2
+EOF
+
+X : 1, Y : 2
+.mapplace 31, p->line_map 15, line 1, i 0, column 2
+EOF
+.mapplace 46, p->line_map 15, line 1, i 1, column 2
+EOF
+
+X : 2, Y : 2
+.mapplace 32, p->line_map 15, line 2, i 0, column 2
+EOF
+.mapplace 47, p->line_map 15, line 2, i 1, column 2
+EOF
+
+X : 3, Y : 2
+.mapplace 33, p->line_map 15, line 3, i 0, column 2
+EOF
+.mapplace 48, p->line_map 15, line 3, i 1, column 2
+EOF
+
+X : 4, Y : 2
+.mapplace 34, p->line_map 15, line 4, i 0, column 2
+EOF
+.mapplace 49, p->line_map 15, line 4, i 1, column 2
+EOF
+
+X : 5, Y : 2
+
+mapplace 35, p->line_map 15, line 5, i 0, column 2
+EOF
+.mapplace 50, p->line_map 15, line 5, i 1, column 2
+EOF
+
+X : 6, Y : 2
+.mapplace 36, p->line_map 15, line 6, i 0, column 2
+EOF
+.mapplace 51, p->line_map 15, line 6, i 1, column 2
+EOF
+
+X : 7, Y : 2
+.mapplace 37, p->line_map 15, line 7, i 0, column 2
+EOF
+.mapplace 52, p->line_map 15, line 7, i 1, column 2
+EOF
+
+X : 8, Y : 2
+.mapplace 38, p->line_map 15, line 8, i 0, column 2
+EOF
+
+mapplace 53, p->line_map 15, line 8, i 1, column 2
+EOF
+
+X : 9, Y : 2
+.mapplace 39, p->line_map 15, line 9, i 0, column 2
+EOF
+.mapplace 54, p->line_map 15, line 9, i 1, column 2
+EOF
+
+X : 10, Y : 2
+.mapplace 40, p->line_map 15, line 10, i 0, column 2
+EOF
+.mapplace 55, p->line_map 15, line 10, i 1, column 2
+EOF
+
+X : 11, Y : 2
+.mapplace 41, p->line_map 15, line 11, i 0, column 2
+EOF
+.mapplace 56, p->line_map 15, line 11, i 1, column 2
+EOF
+
+X : 12, Y : 2
+.mapplace 42, p->line_map 15, line 12, i 0, column 2
+EOF
+.mapplace 57, p->line_map 15, line 12, i 1, column 2
+EOF
+
+X : 13, Y : 2
+.mapplace 43, p->line_map 15, line 13, i 0, column 2
+EOF
+.mapplace 58, p->line_map 15, line 13, i 1, column 2
+EOF
+
+X : 14, Y : 2
+.mapplace 44, p->line_map 15, line 14, i 0, column 2
+EOF
+.mapplace 59, p->line_map 15, line 14, i 1, column 2
+EOF
+
+X : 15, Y : 2
+.mapplace 45, p->line_map 15, line 15, i 0, column 2
+EOF
+.mapplace 60, p->line_map 15, line 15, i 1, column 2
+EOF
+
+X : 16, Y : 2
+.mapplace 46, p->line_map 15, line 16, i 0, column 2
+EOF
+.mapplace 61, p->line_map 15, line 16, i 1, column 2
+EOF
+
+X : 0, Y : 3
+.mapplace 45, p->line_map 15, line 0, i 0, column 3
+EOF
+.mapplace 60, p->line_map 15, line 0, i 1, column 3
+EOF
+
+X : 1, Y : 3
+.mapplace 46, p->line_map 15, line 1, i 0, column 3
+EOF
+.mapplace 61, p->line_map 15, line 1, i 1, column 3
+EOF
+
+X : 2, Y : 3
+.mapplace 47, p->line_map 15, line 2, i 0, column 3
+EOF
+.mapplace 62, p->line_map 15, line 2, i 1, column 3
+EOF
+
+X : 3, Y : 3
+.mapplace 48, p->line_map 15, line 3, i 0, column 3
+EOF
+.mapplace 63, p->line_map 15, line 3, i 1, column 3
+EOF
+
+X : 4, Y : 3
+.mapplace 49, p->line_map 15, line 4, i 0, column 3
+EOF
+.mapplace 64, p->line_map 15, line 4, i 1, column 3
+EOF
+
+X : 5, Y : 3
+.mapplace 50, p->line_map 15, line 5, i 0, column 3
+EOF
+.mapplace 65, p->line_map 15, line 5, i 1, column 3
+EOF
+
+X : 6, Y : 3
+.mapplace 51, p->line_map 15, line 6, i 0, column 3
+EOF
+.mapplace 66, p->line_map 15, line 6, i 1, column 3
+EOF
+
+X : 7, Y : 3
+.mapplace 52, p->line_map 15, line 7, i 0, column 3
+EOF
+.mapplace 67, p->line_map 15, line 7, i 1, column 3
+EOF
+
+X : 8, Y : 3
+
+mapplace 53, p->line_map 15, line 8, i 0, column 3
+EOF
+.mapplace 68, p->line_map 15, line 8, i 1, column 3
+EOF
+
+X : 9, Y : 3
+.mapplace 54, p->line_map 15, line 9, i 0, column 3
+EOF
+.mapplace 69, p->line_map 15, line 9, i 1, column 3
+EOF
+
+X : 10, Y : 3
+.mapplace 55, p->line_map 15, line 10, i 0, column 3
+EOF
+.mapplace 70, p->line_map 15, line 10, i 1, column 3
+EOF
+
+X : 11, Y : 3
+.mapplace 56, p->line_map 15, line 11, i 0, column 3
+EOF
+
+mapplace 71, p->line_map 15, line 11, i 1, column 3
+EOF
+
+X : 12, Y : 3
+.mapplace 57, p->line_map 15, line 12, i 0, column 3
+EOF
+.mapplace 72, p->line_map 15, line 12, i 1, column 3
+EOF
+
+X : 13, Y : 3
+.mapplace 58, p->line_map 15, line 13, i 0, column 3
+EOF
+.mapplace 73, p->line_map 15, line 13, i 1, column 3
+EOF
+
+X : 14, Y : 3
+.mapplace 59, p->line_map 15, line 14, i 0, column 3
+EOF
+.mapplace 74, p->line_map 15, line 14, i 1, column 3
+EOF
+
+X : 15, Y : 3
+.mapplace 60, p->line_map 15, line 15, i 0, column 3
+EOF
+.mapplace 75, p->line_map 15, line 15, i 1, column 3
+EOF
+
+X : 16, Y : 3
+.mapplace 61, p->line_map 15, line 16, i 0, column 3
+EOF
+.mapplace 76, p->line_map 15, line 16, i 1, column 3
+EOF
+
+X : 0, Y : 4
+.mapplace 60, p->line_map 15, line 0, i 0, column 4
+EOF
+.mapplace 75, p->line_map 15, line 0, i 1, column 4
+EOF
+
+X : 1, Y : 4
+.mapplace 61, p->line_map 15, line 1, i 0, column 4
+EOF
+.mapplace 76, p->line_map 15, line 1, i 1, column 4
+EOF
+
+X : 2, Y : 4
+.mapplace 62, p->line_map 15, line 2, i 0, column 4
+EOF
+.mapplace 77, p->line_map 15, line 2, i 1, column 4
+EOF
+
+X : 3, Y : 4
+.mapplace 63, p->line_map 15, line 3, i 0, column 4
+EOF
+.mapplace 78, p->line_map 15, line 3, i 1, column 4
+EOF
+
+X : 4, Y : 4
+.mapplace 64, p->line_map 15, line 4, i 0, column 4
+EOF
+.mapplace 79, p->line_map 15, line 4, i 1, column 4
+EOF
+
+X : 5, Y : 4
+.mapplace 65, p->line_map 15, line 5, i 0, column 4
+EOF
+.mapplace 80, p->line_map 15, line 5, i 1, column 4
+EOF
+
+X : 6, Y : 4
+.mapplace 66, p->line_map 15, line 6, i 0, column 4
+EOF
+.mapplace 81, p->line_map 15, line 6, i 1, column 4
+EOF
+
+X : 7, Y : 4
+.mapplace 67, p->line_map 15, line 7, i 0, column 4
+EOF
+.mapplace 82, p->line_map 15, line 7, i 1, column 4
+EOF
+
+X : 8, Y : 4
+.mapplace 68, p->line_map 15, line 8, i 0, column 4
+EOF
+.mapplace 83, p->line_map 15, line 8, i 1, column 4
+EOF
+
+X : 9, Y : 4
+.mapplace 69, p->line_map 15, line 9, i 0, column 4
+EOF
+.mapplace 84, p->line_map 15, line 9, i 1, column 4
+EOF
+
+X : 10, Y : 4
+.mapplace 70, p->line_map 15, line 10, i 0, column 4
+EOF
+.mapplace 85, p->line_map 15, line 10, i 1, column 4
+EOF
+
+X : 11, Y : 4
+
+mapplace 71, p->line_map 15, line 11, i 0, column 4
+EOF
+.mapplace 86, p->line_map 15, line 11, i 1, column 4
+EOF
+
+X : 12, Y : 4
+.mapplace 72, p->line_map 15, line 12, i 0, column 4
+EOF
+.mapplace 87, p->line_map 15, line 12, i 1, column 4
+EOF
+
+X : 13, Y : 4
+.mapplace 73, p->line_map 15, line 13, i 0, column 4
+EOF
+.mapplace 88, p->line_map 15, line 13, i 1, column 4
+EOF
+
+X : 14, Y : 4
+.mapplace 74, p->line_map 15, line 14, i 0, column 4
+EOF
+
+mapplace 89, p->line_map 15, line 14, i 1, column 4
+EOF
+
+X : 15, Y : 4
+.mapplace 75, p->line_map 15, line 15, i 0, column 4
+EOF
+.mapplace 90, p->line_map 15, line 15, i 1, column 4
+EOF
+
+X : 16, Y : 4
+.mapplace 76, p->line_map 15, line 16, i 0, column 4
+EOF
+.mapplace 91, p->line_map 15, line 16, i 1, column 4
+EOF
+
+X : 0, Y : 5
+.mapplace 75, p->line_map 15, line 0, i 0, column 5
+EOF
+.mapplace 90, p->line_map 15, line 0, i 1, column 5
+EOF
+
+X : 1, Y : 5
+.mapplace 76, p->line_map 15, line 1, i 0, column 5
+EOF
+.mapplace 91, p->line_map 15, line 1, i 1, column 5
+EOF
+
+X : 2, Y : 5
+.mapplace 77, p->line_map 15, line 2, i 0, column 5
+EOF
+.mapplace 92, p->line_map 15, line 2, i 1, column 5
+EOF
+
+X : 3, Y : 5
+.mapplace 78, p->line_map 15, line 3, i 0, column 5
+EOF
+.mapplace 93, p->line_map 15, line 3, i 1, column 5
+EOF
+
+X : 4, Y : 5
+.mapplace 79, p->line_map 15, line 4, i 0, column 5
+EOF
+.mapplace 94, p->line_map 15, line 4, i 1, column 5
+EOF
+
+X : 5, Y : 5
+.mapplace 80, p->line_map 15, line 5, i 0, column 5
+EOF
+.mapplace 95, p->line_map 15, line 5, i 1, column 5
+EOF
+
+X : 6, Y : 5
+.mapplace 81, p->line_map 15, line 6, i 0, column 5
+EOF
+.mapplace 96, p->line_map 15, line 6, i 1, column 5
+EOF
+
+X : 7, Y : 5
+.mapplace 82, p->line_map 15, line 7, i 0, column 5
+EOF
+.mapplace 97, p->line_map 15, line 7, i 1, column 5
+EOF
+
+X : 8, Y : 5
+.mapplace 83, p->line_map 15, line 8, i 0, column 5
+EOF
+.mapplace 98, p->line_map 15, line 8, i 1, column 5
+EOF
+
+X : 9, Y : 5
+.mapplace 84, p->line_map 15, line 9, i 0, column 5
+EOF
+.mapplace 99, p->line_map 15, line 9, i 1, column 5
+EOF
+
+X : 10, Y : 5
+.mapplace 85, p->line_map 15, line 10, i 0, column 5
+EOF
+.mapplace 100, p->line_map 15, line 10, i 1, column 5
+EOF
+
+X : 11, Y : 5
+.mapplace 86, p->line_map 15, line 11, i 0, column 5
+EOF
+.mapplace 101, p->line_map 15, line 11, i 1, column 5
+EOF
+
+X : 12, Y : 5
+.mapplace 87, p->line_map 15, line 12, i 0, column 5
+EOF
+.mapplace 102, p->line_map 15, line 12, i 1, column 5
+EOF
+
+X : 13, Y : 5
+.mapplace 88, p->line_map 15, line 13, i 0, column 5
+EOF
+.mapplace 103, p->line_map 15, line 13, i 1, column 5
+EOF
 
 X : 14, Y : 5
-Piece 1 2:
-**
+
+mapplace 89, p->line_map 15, line 14, i 0, column 5
+EOF
+.mapplace 104, p->line_map 15, line 14, i 1, column 5
+EOF
+
+X : 15, Y : 5
+.mapplace 90, p->line_map 15, line 15, i 0, column 5
+EOF
+.mapplace 105, p->line_map 15, line 15, i 1, column 5
+EOF
+
+X : 16, Y : 5
+.mapplace 91, p->line_map 15, line 16, i 0, column 5
+EOF
+.mapplace 106, p->line_map 15, line 16, i 1, column 5
+EOF
+
+X : 0, Y : 6
+.mapplace 90, p->line_map 15, line 0, i 0, column 6
+EOF
+.mapplace 105, p->line_map 15, line 0, i 1, column 6
+EOF
+
+X : 1, Y : 6
+.mapplace 91, p->line_map 15, line 1, i 0, column 6
+EOF
+.mapplace 106, p->line_map 15, line 1, i 1, column 6
+EOF
+
+X : 2, Y : 6
+.mapplace 92, p->line_map 15, line 2, i 0, column 6
+EOF
+
+mapplace 107, p->line_map 15, line 2, i 1, column 6
+EOF
+
+X : 3, Y : 6
+.mapplace 93, p->line_map 15, line 3, i 0, column 6
+EOF
+.mapplace 108, p->line_map 15, line 3, i 1, column 6
+EOF
+
+X : 4, Y : 6
+.mapplace 94, p->line_map 15, line 4, i 0, column 6
+EOF
+.mapplace 109, p->line_map 15, line 4, i 1, column 6
+EOF
+
+X : 5, Y : 6
+.mapplace 95, p->line_map 15, line 5, i 0, column 6
+EOF
+.mapplace 110, p->line_map 15, line 5, i 1, column 6
+EOF
+
+X : 6, Y : 6
+.mapplace 96, p->line_map 15, line 6, i 0, column 6
+EOF
+.mapplace 111, p->line_map 15, line 6, i 1, column 6
+EOF
+
+X : 7, Y : 6
+.mapplace 97, p->line_map 15, line 7, i 0, column 6
+EOF
+.mapplace 112, p->line_map 15, line 7, i 1, column 6
+EOF
+
+X : 8, Y : 6
+.mapplace 98, p->line_map 15, line 8, i 0, column 6
+EOF
+.mapplace 113, p->line_map 15, line 8, i 1, column 6
+EOF
+
+X : 9, Y : 6
+.mapplace 99, p->line_map 15, line 9, i 0, column 6
+EOF
+.mapplace 114, p->line_map 15, line 9, i 1, column 6
+EOF
+
+X : 10, Y : 6
+.mapplace 100, p->line_map 15, line 10, i 0, column 6
+EOF
+.mapplace 115, p->line_map 15, line 10, i 1, column 6
+EOF
+
+X : 11, Y : 6
+.mapplace 101, p->line_map 15, line 11, i 0, column 6
+EOF
+.mapplace 116, p->line_map 15, line 11, i 1, column 6
+EOF
+
+X : 12, Y : 6
+.mapplace 102, p->line_map 15, line 12, i 0, column 6
+EOF
+.mapplace 117, p->line_map 15, line 12, i 1, column 6
+EOF
+
+X : 13, Y : 6
+.mapplace 103, p->line_map 15, line 13, i 0, column 6
+EOF
+.mapplace 118, p->line_map 15, line 13, i 1, column 6
+EOF
+
+X : 14, Y : 6
+.mapplace 104, p->line_map 15, line 14, i 0, column 6
+EOF
+.mapplace 119, p->line_map 15, line 14, i 1, column 6
+EOF
+
+X : 15, Y : 6
+.mapplace 105, p->line_map 15, line 15, i 0, column 6
+EOF
+.mapplace 120, p->line_map 15, line 15, i 1, column 6
+EOF
+
+X : 16, Y : 6
+.mapplace 106, p->line_map 15, line 16, i 0, column 6
+EOF
+.mapplace 121, p->line_map 15, line 16, i 1, column 6
+EOF
+
+X : 0, Y : 7
+.mapplace 105, p->line_map 15, line 0, i 0, column 7
+EOF
+.mapplace 120, p->line_map 15, line 0, i 1, column 7
+EOF
+
+X : 1, Y : 7
+.mapplace 106, p->line_map 15, line 1, i 0, column 7
+EOF
+.mapplace 121, p->line_map 15, line 1, i 1, column 7
+EOF
+
+X : 2, Y : 7
+
+mapplace 107, p->line_map 15, line 2, i 0, column 7
+EOF
+.mapplace 122, p->line_map 15, line 2, i 1, column 7
+EOF
+
+X : 3, Y : 7
+.mapplace 108, p->line_map 15, line 3, i 0, column 7
+EOF
+.mapplace 123, p->line_map 15, line 3, i 1, column 7
+EOF
+
+X : 4, Y : 7
+.mapplace 109, p->line_map 15, line 4, i 0, column 7
+EOF
+.mapplace 124, p->line_map 15, line 4, i 1, column 7
+EOF
+
+X : 5, Y : 7
+.mapplace 110, p->line_map 15, line 5, i 0, column 7
+EOF
+
+mapplace 125, p->line_map 15, line 5, i 1, column 7
+EOF
+
+X : 6, Y : 7
+.mapplace 111, p->line_map 15, line 6, i 0, column 7
+EOF
+.mapplace 126, p->line_map 15, line 6, i 1, column 7
+EOF
+
+X : 7, Y : 7
+.mapplace 112, p->line_map 15, line 7, i 0, column 7
+EOF
+.mapplace 127, p->line_map 15, line 7, i 1, column 7
+EOF
+
+X : 8, Y : 7
+.mapplace 113, p->line_map 15, line 8, i 0, column 7
+EOF
+.mapplace 128, p->line_map 15, line 8, i 1, column 7
+EOF
+
+X : 9, Y : 7
+.mapplace 114, p->line_map 15, line 9, i 0, column 7
+EOF
+.mapplace 129, p->line_map 15, line 9, i 1, column 7
+EOF
+
+X : 10, Y : 7
+.mapplace 115, p->line_map 15, line 10, i 0, column 7
+EOF
+.mapplace 130, p->line_map 15, line 10, i 1, column 7
+EOF
+
+X : 11, Y : 7
+.mapplace 116, p->line_map 15, line 11, i 0, column 7
+EOF
+.mapplace 131, p->line_map 15, line 11, i 1, column 7
+EOF
+
+X : 12, Y : 7
+.mapplace 117, p->line_map 15, line 12, i 0, column 7
+EOF
+.mapplace 132, p->line_map 15, line 12, i 1, column 7
+EOF
+
+X : 13, Y : 7
+.mapplace 118, p->line_map 15, line 13, i 0, column 7
+EOF
+.mapplace 133, p->line_map 15, line 13, i 1, column 7
+EOF
+
+X : 14, Y : 7
+.mapplace 119, p->line_map 15, line 14, i 0, column 7
+EOF
+.mapplace 134, p->line_map 15, line 14, i 1, column 7
+EOF
+
+X : 15, Y : 7
+.mapplace 120, p->line_map 15, line 15, i 0, column 7
+EOF
+.mapplace 135, p->line_map 15, line 15, i 1, column 7
+EOF
+
+X : 16, Y : 7
+.mapplace 121, p->line_map 15, line 16, i 0, column 7
+EOF
+.mapplace 136, p->line_map 15, line 16, i 1, column 7
+EOF
+
+X : 0, Y : 8
+.mapplace 120, p->line_map 15, line 0, i 0, column 8
+EOF
+.mapplace 135, p->line_map 15, line 0, i 1, column 8
+EOF
+
+X : 1, Y : 8
+.mapplace 121, p->line_map 15, line 1, i 0, column 8
+EOF
+.mapplace 136, p->line_map 15, line 1, i 1, column 8
+EOF
+
+X : 2, Y : 8
+.mapplace 122, p->line_map 15, line 2, i 0, column 8
+EOF
+.mapplace 137, p->line_map 15, line 2, i 1, column 8
+EOF
+
+X : 3, Y : 8
+.mapplace 123, p->line_map 15, line 3, i 0, column 8
+EOF
+.mapplace 138, p->line_map 15, line 3, i 1, column 8
+EOF
+
+X : 4, Y : 8
+.mapplace 124, p->line_map 15, line 4, i 0, column 8
+EOF
+.mapplace 139, p->line_map 15, line 4, i 1, column 8
+EOF
+
+X : 5, Y : 8
+
+mapplace 125, p->line_map 15, line 5, i 0, column 8
+EOF
+.mapplace 140, p->line_map 15, line 5, i 1, column 8
+EOF
+
+X : 6, Y : 8
+.mapplace 126, p->line_map 15, line 6, i 0, column 8
+EOF
+.mapplace 141, p->line_map 15, line 6, i 1, column 8
+EOF
+
+X : 7, Y : 8
+.mapplace 127, p->line_map 15, line 7, i 0, column 8
+EOF
+.mapplace 142, p->line_map 15, line 7, i 1, column 8
+EOF
+
+X : 8, Y : 8
+.mapplace 128, p->line_map 15, line 8, i 0, column 8
+EOF
+
+mapplace 143, p->line_map 15, line 8, i 1, column 8
+EOF
+
+X : 9, Y : 8
+.mapplace 129, p->line_map 15, line 9, i 0, column 8
+EOF
+.mapplace 144, p->line_map 15, line 9, i 1, column 8
+EOF
+
+X : 10, Y : 8
+.mapplace 130, p->line_map 15, line 10, i 0, column 8
+EOF
+.mapplace 145, p->line_map 15, line 10, i 1, column 8
+EOF
+
+X : 11, Y : 8
+.mapplace 131, p->line_map 15, line 11, i 0, column 8
+EOF
+Omapplace 146, p->line_map 15, line 11, i 1, column 8
+
+X : 12, Y : 8
+.mapplace 132, p->line_map 15, line 12, i 0, column 8
+EOF
+.mapplace 147, p->line_map 15, line 12, i 1, column 8
+EOF
+
+X : 13, Y : 8
+.mapplace 133, p->line_map 15, line 13, i 0, column 8
+EOF
+.mapplace 148, p->line_map 15, line 13, i 1, column 8
+EOF
+
+X : 14, Y : 8
+.mapplace 134, p->line_map 15, line 14, i 0, column 8
+EOF
+.mapplace 149, p->line_map 15, line 14, i 1, column 8
+EOF
+
+X : 15, Y : 8
+.mapplace 135, p->line_map 15, line 15, i 0, column 8
+EOF
+.mapplace 150, p->line_map 15, line 15, i 1, column 8
+EOF
+
+X : 16, Y : 8
+.mapplace 136, p->line_map 15, line 16, i 0, column 8
+EOF
+.mapplace 151, p->line_map 15, line 16, i 1, column 8
+EOF
+
+X : 0, Y : 9
+.mapplace 135, p->line_map 15, line 0, i 0, column 9
+EOF
+.mapplace 150, p->line_map 15, line 0, i 1, column 9
+EOF
+
+X : 1, Y : 9
+.mapplace 136, p->line_map 15, line 1, i 0, column 9
+EOF
+.mapplace 151, p->line_map 15, line 1, i 1, column 9
+EOF
+
+X : 2, Y : 9
+.mapplace 137, p->line_map 15, line 2, i 0, column 9
+EOF
+.mapplace 152, p->line_map 15, line 2, i 1, column 9
+EOF
+
+X : 3, Y : 9
+.mapplace 138, p->line_map 15, line 3, i 0, column 9
+EOF
+.mapplace 153, p->line_map 15, line 3, i 1, column 9
+EOF
+
+X : 4, Y : 9
+.mapplace 139, p->line_map 15, line 4, i 0, column 9
+EOF
+.mapplace 154, p->line_map 15, line 4, i 1, column 9
+EOF
+
+X : 5, Y : 9
+.mapplace 140, p->line_map 15, line 5, i 0, column 9
+EOF
+.mapplace 155, p->line_map 15, line 5, i 1, column 9
+EOF
+
+X : 6, Y : 9
+.mapplace 141, p->line_map 15, line 6, i 0, column 9
+EOF
+.mapplace 156, p->line_map 15, line 6, i 1, column 9
+EOF
+
+X : 7, Y : 9
+.mapplace 142, p->line_map 15, line 7, i 0, column 9
+EOF
+.mapplace 157, p->line_map 15, line 7, i 1, column 9
+EOF
+
+X : 8, Y : 9
+
+mapplace 143, p->line_map 15, line 8, i 0, column 9
+EOF
+.mapplace 158, p->line_map 15, line 8, i 1, column 9
+EOF
+
+X : 9, Y : 9
+.mapplace 144, p->line_map 15, line 9, i 0, column 9
+EOF
+.mapplace 159, p->line_map 15, line 9, i 1, column 9
+EOF
+
+X : 10, Y : 9
+.mapplace 145, p->line_map 15, line 10, i 0, column 9
+EOF
+.mapplace 160, p->line_map 15, line 10, i 1, column 9
+EOF
+
+X : 11, Y : 9
+Omapplace 146, p->line_map 15, line 11, i 0, column 9
+
+X : 12, Y : 9
+.mapplace 147, p->line_map 15, line 12, i 0, column 9
+EOF
+.mapplace 162, p->line_map 15, line 12, i 1, column 9
+EOF
+
+X : 13, Y : 9
+.mapplace 148, p->line_map 15, line 13, i 0, column 9
+EOF
+.mapplace 163, p->line_map 15, line 13, i 1, column 9
+EOF
+
+X : 14, Y : 9
+.mapplace 149, p->line_map 15, line 14, i 0, column 9
+EOF
+Omapplace 164, p->line_map 15, line 14, i 1, column 9
+
+X : 15, Y : 9
+.mapplace 150, p->line_map 15, line 15, i 0, column 9
+EOF
+.mapplace 165, p->line_map 15, line 15, i 1, column 9
+EOF
+
+X : 16, Y : 9
+.mapplace 151, p->line_map 15, line 16, i 0, column 9
+EOF
+.mapplace 166, p->line_map 15, line 16, i 1, column 9
+EOF
+
+X : 0, Y : 10
+.mapplace 150, p->line_map 15, line 0, i 0, column 10
+EOF
+.mapplace 165, p->line_map 15, line 0, i 1, column 10
+EOF
+
+X : 1, Y : 10
+.mapplace 151, p->line_map 15, line 1, i 0, column 10
+EOF
+.mapplace 166, p->line_map 15, line 1, i 1, column 10
+EOF
+
+X : 2, Y : 10
+.mapplace 152, p->line_map 15, line 2, i 0, column 10
+EOF
+.mapplace 167, p->line_map 15, line 2, i 1, column 10
+EOF
+
+X : 3, Y : 10
+.mapplace 153, p->line_map 15, line 3, i 0, column 10
+EOF
+.mapplace 168, p->line_map 15, line 3, i 1, column 10
+EOF
+
+X : 4, Y : 10
+.mapplace 154, p->line_map 15, line 4, i 0, column 10
+EOF
+.mapplace 169, p->line_map 15, line 4, i 1, column 10
+EOF
+
+X : 5, Y : 10
+.mapplace 155, p->line_map 15, line 5, i 0, column 10
+EOF
+.mapplace 170, p->line_map 15, line 5, i 1, column 10
+EOF
+
+X : 6, Y : 10
+.mapplace 156, p->line_map 15, line 6, i 0, column 10
+EOF
+.mapplace 171, p->line_map 15, line 6, i 1, column 10
+EOF
+
+X : 7, Y : 10
+.mapplace 157, p->line_map 15, line 7, i 0, column 10
+EOF
+.mapplace 172, p->line_map 15, line 7, i 1, column 10
+EOF
+
+X : 8, Y : 10
+.mapplace 158, p->line_map 15, line 8, i 0, column 10
+EOF
+.mapplace 173, p->line_map 15, line 8, i 1, column 10
+EOF
+
+X : 9, Y : 10
+.mapplace 159, p->line_map 15, line 9, i 0, column 10
+EOF
+.mapplace 174, p->line_map 15, line 9, i 1, column 10
+EOF
+
+X : 10, Y : 10
+.mapplace 160, p->line_map 15, line 10, i 0, column 10
+EOF
+.mapplace 175, p->line_map 15, line 10, i 1, column 10
+EOF
+
+X : 11, Y : 10
+
+mapplace 161, p->line_map 15, line 11, i 0, column 10
+EOF
+.mapplace 176, p->line_map 15, line 11, i 1, column 10
+EOF
+
+X : 12, Y : 10
+.mapplace 162, p->line_map 15, line 12, i 0, column 10
+EOF
+.mapplace 177, p->line_map 15, line 12, i 1, column 10
+EOF
+
+X : 13, Y : 10
+.mapplace 163, p->line_map 15, line 13, i 0, column 10
+EOF
+.mapplace 178, p->line_map 15, line 13, i 1, column 10
+EOF
+
+X : 14, Y : 10
+Omapplace 164, p->line_map 15, line 14, i 0, column 10
+
+X : 15, Y : 10
+.mapplace 165, p->line_map 15, line 15, i 0, column 10
+EOF
+.mapplace 180, p->line_map 15, line 15, i 1, column 10
+EOF
+
+X : 16, Y : 10
+.mapplace 166, p->line_map 15, line 16, i 0, column 10
+EOF
+.mapplace 181, p->line_map 15, line 16, i 1, column 10
+EOF
+
+X : 0, Y : 11
+.mapplace 165, p->line_map 15, line 0, i 0, column 11
+EOF
+.mapplace 180, p->line_map 15, line 0, i 1, column 11
+EOF
+
+X : 1, Y : 11
+.mapplace 166, p->line_map 15, line 1, i 0, column 11
+EOF
+.mapplace 181, p->line_map 15, line 1, i 1, column 11
+EOF
+
+X : 2, Y : 11
+.mapplace 167, p->line_map 15, line 2, i 0, column 11
+EOF
+.mapplace 182, p->line_map 15, line 2, i 1, column 11
+EOF
+
+X : 3, Y : 11
+.mapplace 168, p->line_map 15, line 3, i 0, column 11
+EOF
+.mapplace 183, p->line_map 15, line 3, i 1, column 11
+EOF
+
+X : 4, Y : 11
+.mapplace 169, p->line_map 15, line 4, i 0, column 11
+EOF
+.mapplace 184, p->line_map 15, line 4, i 1, column 11
+EOF
+
+X : 5, Y : 11
+.mapplace 170, p->line_map 15, line 5, i 0, column 11
+EOF
+.mapplace 185, p->line_map 15, line 5, i 1, column 11
+EOF
+
+X : 6, Y : 11
+.mapplace 171, p->line_map 15, line 6, i 0, column 11
+EOF
+.mapplace 186, p->line_map 15, line 6, i 1, column 11
+EOF
+
+X : 7, Y : 11
+.mapplace 172, p->line_map 15, line 7, i 0, column 11
+EOF
+.mapplace 187, p->line_map 15, line 7, i 1, column 11
+EOF
+
+X : 8, Y : 11
+.mapplace 173, p->line_map 15, line 8, i 0, column 11
+EOF
+.mapplace 188, p->line_map 15, line 8, i 1, column 11
+EOF
+
+X : 9, Y : 11
+.mapplace 174, p->line_map 15, line 9, i 0, column 11
+EOF
+.mapplace 189, p->line_map 15, line 9, i 1, column 11
+EOF
+
+X : 10, Y : 11
+.mapplace 175, p->line_map 15, line 10, i 0, column 11
+EOF
+.mapplace 190, p->line_map 15, line 10, i 1, column 11
+EOF
+
+X : 11, Y : 11
+.mapplace 176, p->line_map 15, line 11, i 0, column 11
+EOF
+.mapplace 191, p->line_map 15, line 11, i 1, column 11
+EOF
+
+X : 12, Y : 11
+.mapplace 177, p->line_map 15, line 12, i 0, column 11
+EOF
+.mapplace 192, p->line_map 15, line 12, i 1, column 11
+EOF
+
+X : 13, Y : 11
+.mapplace 178, p->line_map 15, line 13, i 0, column 11
+EOF
+.mapplace 193, p->line_map 15, line 13, i 1, column 11
+EOF
+
+X : 14, Y : 11
+
+mapplace 179, p->line_map 15, line 14, i 0, column 11
+EOF
+.mapplace 194, p->line_map 15, line 14, i 1, column 11
+EOF
+
+X : 15, Y : 11
+.mapplace 180, p->line_map 15, line 15, i 0, column 11
+EOF
+.mapplace 195, p->line_map 15, line 15, i 1, column 11
+EOF
+
+X : 16, Y : 11
+.mapplace 181, p->line_map 15, line 16, i 0, column 11
+EOF
+.mapplace 196, p->line_map 15, line 16, i 1, column 11
+EOF
+
+X : 0, Y : 12
+.mapplace 180, p->line_map 15, line 0, i 0, column 12
+EOF
+.mapplace 195, p->line_map 15, line 0, i 1, column 12
+EOF
+
+X : 1, Y : 12
+.mapplace 181, p->line_map 15, line 1, i 0, column 12
+EOF
+.mapplace 196, p->line_map 15, line 1, i 1, column 12
+EOF
+
+X : 2, Y : 12
+.mapplace 182, p->line_map 15, line 2, i 0, column 12
+EOF
+
+mapplace 197, p->line_map 15, line 2, i 1, column 12
+EOF
+
+X : 3, Y : 12
+.mapplace 183, p->line_map 15, line 3, i 0, column 12
+EOF
+.mapplace 198, p->line_map 15, line 3, i 1, column 12
+EOF
+
+X : 4, Y : 12
+.mapplace 184, p->line_map 15, line 4, i 0, column 12
+EOF
+.mapplace 199, p->line_map 15, line 4, i 1, column 12
+EOF
+
+X : 5, Y : 12
+.mapplace 185, p->line_map 15, line 5, i 0, column 12
+EOF
+.mapplace 200, p->line_map 15, line 5, i 1, column 12
+EOF
+
+X : 6, Y : 12
+.mapplace 186, p->line_map 15, line 6, i 0, column 12
+EOF
+.mapplace 201, p->line_map 15, line 6, i 1, column 12
+EOF
+
+X : 7, Y : 12
+.mapplace 187, p->line_map 15, line 7, i 0, column 12
+EOF
+.mapplace 202, p->line_map 15, line 7, i 1, column 12
+EOF
+
+X : 8, Y : 12
+.mapplace 188, p->line_map 15, line 8, i 0, column 12
+EOF
+.mapplace 203, p->line_map 15, line 8, i 1, column 12
+EOF
+
+X : 9, Y : 12
+.mapplace 189, p->line_map 15, line 9, i 0, column 12
+EOF
+.mapplace 204, p->line_map 15, line 9, i 1, column 12
+EOF
+
+X : 10, Y : 12
+.mapplace 190, p->line_map 15, line 10, i 0, column 12
+EOF
+.mapplace 205, p->line_map 15, line 10, i 1, column 12
+EOF
+
+X : 11, Y : 12
+.mapplace 191, p->line_map 15, line 11, i 0, column 12
+EOF
+.mapplace 206, p->line_map 15, line 11, i 1, column 12
+EOF
+
+X : 12, Y : 12
+.mapplace 192, p->line_map 15, line 12, i 0, column 12
+EOF
+.mapplace 207, p->line_map 15, line 12, i 1, column 12
+EOF
+
+X : 13, Y : 12
+.mapplace 193, p->line_map 15, line 13, i 0, column 12
+EOF
+.mapplace 208, p->line_map 15, line 13, i 1, column 12
+EOF
+
+X : 14, Y : 12
+.mapplace 194, p->line_map 15, line 14, i 0, column 12
+EOF
+.mapplace 209, p->line_map 15, line 14, i 1, column 12
+EOF
+
+X : 15, Y : 12
+.mapplace 195, p->line_map 15, line 15, i 0, column 12
+EOF
+.mapplace 210, p->line_map 15, line 15, i 1, column 12
+EOF
+
+X : 16, Y : 12
+.mapplace 196, p->line_map 15, line 16, i 0, column 12
+EOF
+.mapplace 211, p->line_map 15, line 16, i 1, column 12
+EOF
+
+X : 0, Y : 13
+.mapplace 195, p->line_map 15, line 0, i 0, column 13
+EOF
+.mapplace 210, p->line_map 15, line 0, i 1, column 13
+EOF
+
+X : 1, Y : 13
+.mapplace 196, p->line_map 15, line 1, i 0, column 13
+EOF
+.mapplace 211, p->line_map 15, line 1, i 1, column 13
+EOF
+
+X : 2, Y : 13
+
+mapplace 197, p->line_map 15, line 2, i 0, column 13
+EOF
+.mapplace 212, p->line_map 15, line 2, i 1, column 13
+EOF
+
+X : 3, Y : 13
+.mapplace 198, p->line_map 15, line 3, i 0, column 13
+EOF
+.mapplace 213, p->line_map 15, line 3, i 1, column 13
+EOF
+
+X : 4, Y : 13
+.mapplace 199, p->line_map 15, line 4, i 0, column 13
+EOF
+.mapplace 214, p->line_map 15, line 4, i 1, column 13
+EOF
+
+X : 5, Y : 13
+.mapplace 200, p->line_map 15, line 5, i 0, column 13
+EOF
+
+mapplace 215, p->line_map 15, line 5, i 1, column 13
+EOF
+
+X : 6, Y : 13
+.mapplace 201, p->line_map 15, line 6, i 0, column 13
+EOF
+.mapplace 216, p->line_map 15, line 6, i 1, column 13
+EOF
+
+X : 7, Y : 13
+.mapplace 202, p->line_map 15, line 7, i 0, column 13
+EOF
+.mapplace 217, p->line_map 15, line 7, i 1, column 13
+EOF
+
+X : 8, Y : 13
+.mapplace 203, p->line_map 15, line 8, i 0, column 13
+EOF
+.mapplace 218, p->line_map 15, line 8, i 1, column 13
+EOF
+
+X : 9, Y : 13
+.mapplace 204, p->line_map 15, line 9, i 0, column 13
+EOF
+.mapplace 219, p->line_map 15, line 9, i 1, column 13
+EOF
+
+X : 10, Y : 13
+.mapplace 205, p->line_map 15, line 10, i 0, column 13
+EOF
+.mapplace 220, p->line_map 15, line 10, i 1, column 13
+EOF
+
+X : 11, Y : 13
+.mapplace 206, p->line_map 15, line 11, i 0, column 13
+EOF
+.mapplace 221, p->line_map 15, line 11, i 1, column 13
+EOF
+
+X : 12, Y : 13
+.mapplace 207, p->line_map 15, line 12, i 0, column 13
+EOF
+.mapplace 222, p->line_map 15, line 12, i 1, column 13
+EOF
+
+X : 13, Y : 13
+.mapplace 208, p->line_map 15, line 13, i 0, column 13
+EOF
+.mapplace 223, p->line_map 15, line 13, i 1, column 13
+EOF
+
+X : 14, Y : 13
+.mapplace 209, p->line_map 15, line 14, i 0, column 13
+EOF
+.mapplace 224, p->line_map 15, line 14, i 1, column 13
+EOF
+
+X : 15, Y : 13
+.mapplace 210, p->line_map 15, line 15, i 0, column 13
+EOF
+.mapplace 225, p->line_map 15, line 15, i 1, column 13
+EOF
+
+X : 16, Y : 13
+.mapplace 211, p->line_map 15, line 16, i 0, column 13
+EOF
+.mapplace 226, p->line_map 15, line 16, i 1, column 13
+EOF
+
+X : 0, Y : 14
+.mapplace 210, p->line_map 15, line 0, i 0, column 14
+EOF
+.mapplace 225, p->line_map 15, line 0, i 1, column 14
+EOF
+
+X : 1, Y : 14
+.mapplace 211, p->line_map 15, line 1, i 0, column 14
+EOF
+.mapplace 226, p->line_map 15, line 1, i 1, column 14
+EOF
+
+X : 2, Y : 14
+.mapplace 212, p->line_map 15, line 2, i 0, column 14
+EOF
+.mapplace 227, p->line_map 15, line 2, i 1, column 14
+EOF
+
+X : 3, Y : 14
+.mapplace 213, p->line_map 15, line 3, i 0, column 14
+EOF
+.mapplace 228, p->line_map 15, line 3, i 1, column 14
+EOF
+
+X : 4, Y : 14
+.mapplace 214, p->line_map 15, line 4, i 0, column 14
+EOF
+.mapplace 229, p->line_map 15, line 4, i 1, column 14
+EOF
+
+X : 5, Y : 14
+
+mapplace 215, p->line_map 15, line 5, i 0, column 14
+EOF
+Xmapplace 230, p->line_map 15, line 5, i 1, column 14
+EOF
+
+hello
+
+X : 5, Y : 14
 
 p->line
 .................
@@ -241,9 +1520,9 @@ p->line
 ..............X..
 .................
 .................
-**
 
 p->ptr
-**
+*
+*
 
 

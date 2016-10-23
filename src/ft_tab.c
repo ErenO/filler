@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 20:51:51 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/23 09:49:06 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,27 +68,33 @@ int	ft_check_piece(t_p *p, int line, int column)
 	map_place = 0;
 	piece_place = 0;
 	// dprintf(2, "\nhello\n");
+	dprintf(2, "\nX : %d, Y : %d\n", line, column);
+	// dprintf(2, "p->ptr\n%s\n", p->ptr);
 	while (i < p->line_piece && (i + p->line_piece) < p->line_map)
 	{
 		j = 0;
-		map_place = column + ((p->line_map + 1) * (line + i));
-		piece_place = column + ((p->line_piece + 1) * i);
+		map_place = line + ((p->line_map) * (column + i));
+		piece_place = line + ((p->line_piece) * i);
 		while (j < p->col_piece && p->line[map_place] != 0)
 		{
+			dprintf(2, "%c", p->line[map_place]);
+			dprintf(2, "mapplace %d, p->line_map %d, line %d, i %d, column %d\n", map_place, p->line_map, line, i, column);
+			if (p->line[map_place] == '\n' && p->ptr[piece_place] != '*')
+				break ;
 			if (p->line[map_place] == p->ch)
 			{
-				dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|\n", p->line[map_place], map_place);
+				// dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|\n", p->line[map_place], map_place);
 				count++;
 			}
 
 			if ((j + p->col_piece) > p->col_map && p->ptr[piece_place] == '*')
 			{
-				dprintf(2, "\n2\n");
+				// dprintf(2, "\n2\n");
 				return (0);
 			}
-			if (p->line[map_place] != p->ch && p->line[map_place] != '.' && p->line[map_place] != '\n')
+			if (p->line[map_place] != p->ch &&  p->line[map_place] != (p->ch + 32) && p->line[map_place] != '.' && p->line[map_place] != '\n')
 			{
-				dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|\n", p->line[map_place], map_place);
+				// dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|, p->ch %c\n", p->line[map_place], map_place, p->ch);
 				return (0);
 			}
 			map_place++;
@@ -96,18 +102,20 @@ int	ft_check_piece(t_p *p, int line, int column)
 			j++;
 			m++;
 		}
+		dprintf(2, "EOF\n");
 		// dprintf(2, "NONNNN");
 		i++;
 	}
 	// dprintf(2, "\nm:%d\n", m);
 	if (count == 1)
 	{
-		dprintf(2, "\n\n");
+		dprintf(2, "\nhello\n");
 		return (1);
 	}
 	else
 	{
-		dprintf(2, "\nOUIIIII%d\n", count);
+		// dprintf(2, "\nOUIIIII%d\n", count);
+		// dprintf(2, "\nX : %d, Y : %d\n", line, column);
 		return (0);
 	}
 	// return (count == 1) ? 1 : 0;
