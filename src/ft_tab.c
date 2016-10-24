@@ -6,11 +6,47 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/24 08:52:08 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/24 09:00:30 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
+
+
+// static void print_map(char *map, int curse)
+// {
+// 	int i;
+//
+// 	i = 0;
+// 	dprintf(2, "\n");
+// 	while (map[i] != 0)
+// 	{
+// 		if (i == curse)
+// 		{
+// 			dprintf(2, "|");
+// 		}
+// 		dprintf(2, "%c", map[i]);
+// 		i++;
+// 	}
+// 	dprintf(2, "\n");
+// }
+
+// static void print_piece(char *piece, int curse)
+// {
+// 	int i;
+//
+// 	i = 0;
+// 	while (map[i] != 0)
+// 	{
+// 		if (i == curse)
+// 		{
+// 			dprintf(2, "|");
+// 		}
+// 		dprintf(2, "%c", map[i]);
+// 		i++;
+// 	}
+// }
+
 
 /*
 	Check si la piece rentre, return 1 si c'est bon, 0 dans le cas contraire
@@ -40,7 +76,7 @@ int		ft_check_piece(t_p *p, int line, int column)
 		map_place = line + ((p->col_map + 1) * (column + i));
 		piece_place = ((p->col_piece + 1) * i);
 		// print_map(p->line, map_place);
-		// print_piece(p->ptr, piece_place);
+		// print_map(p->ptr, piece_place);
 		while (j < p->col_piece && p->line[map_place] != 0)
 		{
 			// dprintf(2, "%c", p->line[map_place]);
@@ -65,6 +101,9 @@ int		ft_check_piece(t_p *p, int line, int column)
 			if (p->line[map_place] != p->ch &&  p->line[map_place] != (p->ch + 32) && p->line[map_place] != '.' && p->line[map_place] != '\n')
 			{
 				// dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|, p->ch %c\n", p->line[map_place], map_place, p->ch);
+				dprintf(2, "map\n%s", p->line);
+				// print_map(p->line, map_place);
+				// print_map(p->ptr, piece_place);
 				dprintf(2, "2\n");
 				return (0);
 			}
