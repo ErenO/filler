@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/23 23:09:01 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/24 08:46:19 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ void	ft_piece_big_size(char *line, t_p *p)
 	}
 }
 
+/* stocker la map dans p->line */
+
 void 	ft_stock_map(char *line, t_p *p)
 {
 	int i;
@@ -89,26 +91,19 @@ void 	ft_stock_map(char *line, t_p *p)
 	i = 0;
 	if (line[1] != ' ')
 	{
-
 		while ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
 		{
-			dprintf(2, "%c", line[i]);
+			// dprintf(2, "%c", line[i]);
 			i++;
 		}
-		dprintf(2, "lol%d, %d\n", ft_strncmp(line, "Piece", 5), p->check_map);
-		// if (p->check_map != 3)
-		// {
+		// dprintf(2, "lol%d, %d\n", ft_strncmp(line, "Piece", 5), p->check_map);
 		if (ft_strncmp(line, "Piece", 5) != 0 && !p->check_map)
-		{
-			// dprintf(2, "hello\n");
 			p->line = ft_strjoin(p->line, ft_strjoin(ft_strsub(line, i, ft_strlen(line) - i), "\n"));
-		}
 		else
 		{
 			if (p->check_map != 3)
 				p->check_map = 1;
 		}
-		// }
 	}
 	// dprintf(2, "\np->line\n%s\n", p->line);
 }
@@ -124,52 +119,25 @@ void	ft_stock_piece(char *line, t_p *p, int i)
 	// 	error();
 	// dprintf(2, "\n\n");
 	if (p->check_map == 1)
-	{
 		p->piece_size--;
-		// dprintf(2, "\nbonjour\n");
-	}
 	// if (p->piece_size == 0 && p->check_map == 1)
 	// {
 		// p->check_map = 0;
 	// }
 	if (p->piece > 0 && p->piece < i && (line[0] == '.' || line[0] == '*')) // p->piece < i ?
 	{
-		dprintf(2, "hello\n");
 		// if (p->check_map == 3)
 		// 	return ;
-		// while (line[j] != '\0')
-		// {
-		// 	if (line[j] == '*')
-		// 	{
-		// 		p->nb++;
-		// 	}
-		// 	j++;
-		// }
 		// dprintf(2, "piece length %zu\n", ft_strlen(p->ptr));
-		// while (1)
-		// {
 		if (p->ptr == NULL)
-		{
 			p->ptr = ft_strnew(0);
-		}
 		p->ptr = ft_strjoin(p->ptr, ft_strjoin(line, "\n"));
-		dprintf(2, "p->ptr: %s line: %s\n", p->ptr, line);
+		// dprintf(2, "p->ptr: %s line: %s\n", p->ptr, line);
 		ret = ft_find_out_place(p);
 		if (ret == 1)
 		{
 			p->check_map = 3;
-			// p->line = NULL;
-			// p->ptr = NULL;
-				// break ;
 			}
-		// }
-		dprintf(2, "tomorrow\n");
 	}
 	// dprintf(2, "\np->piece_size: %d\np->check_map: %d\np->line_piece: %d\n", p->piece_size, p->check_map, p->line_piece);
-	// if (p->piece > 0 && p->piece < i && (line[0] != '.' || line[0] != '*'))
-	// {
-	// 	tab_init(p);
-	// 	tab_put(p);
-	//
-	// }
 }
