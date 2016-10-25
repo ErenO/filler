@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   filler.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 16:05:07 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/25 16:26:29 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 typedef struct	s_p
 {
+	int		curse_map;
+	int		curse_piece;
 	int		put_line;
 	int		put_col;
 	int		line_map;
@@ -37,9 +39,9 @@ typedef struct	s_p
 /*ft_read_map*/
 void		init_struct_p(t_p *p);
 void		ft_map_size(char *line, t_p *p);
-void		ft_piece_big_size(char *line, t_p *p);
-void		ft_stock_piece(char *line, t_p *p, int i);
-void		ft_stock_map(char *line, t_p *p);
+char		*ft_piece_size(char *line, t_p *p, int *index);
+char		*ft_stock_piece(char *line, t_p *p, int *index);
+char		*ft_stock_map(char *line, t_p *p, int *index);
 // void		find_place(t_p *p);
 // void		tab_init(t_p *p);
 // void		tab_put(t_p *p);
