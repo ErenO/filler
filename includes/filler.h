@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 16:26:29 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/25 17:57:17 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 typedef struct	s_p
 {
-	int		curse_map;
-	int		curse_piece;
 	int		put_line;
 	int		put_col;
 	int		line_map;
@@ -39,9 +37,9 @@ typedef struct	s_p
 /*ft_read_map*/
 void		init_struct_p(t_p *p);
 void		ft_map_size(char *line, t_p *p);
-char		*ft_piece_size(char *line, t_p *p, int *index);
-char		*ft_stock_piece(char *line, t_p *p, int *index);
-char		*ft_stock_map(char *line, t_p *p, int *index);
+void		ft_piece_big_size(char *line, t_p *p);
+void		ft_stock_piece(char *line, t_p *p, int i);
+void		ft_stock_map(char *line, t_p *p);
 // void		find_place(t_p *p);
 // void		tab_init(t_p *p);
 // void		tab_put(t_p *p);
@@ -51,7 +49,9 @@ char		*ft_stock_map(char *line, t_p *p, int *index);
 //int
 int			game_player(char *line, t_p *p);
 /*ft_tab*/
-int	ft_check_piece(t_p *p, int line, int column);
+int	ft_check_piece(t_p *p, int x, int y);
 int ft_find_out_place(t_p *p);
-
+void print_map(char *map, int curse);
+void print_piece(char *piece, int curse);
+void ft_put_solve(int x, int y);
 #endif
