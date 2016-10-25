@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 16:26:29 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/25 17:14:04 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,7 @@ int			game_player(char *line, t_p *p);
 int	ft_check_piece(t_p *p, int line, int column);
 int ft_find_out_place(t_p *p);
 
+
+void print_map(char *map, int curse);
+void	print_xy(char *map, int x, int y);
 #endif
