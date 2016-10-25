@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 18:05:40 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/25 18:14:40 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,12 +117,13 @@ int	ft_find_out_place(t_p *p)
 	int y;
 	int ret;
 
+	x = 0;
 	y = 0;
 	ret = 0;
-	while (y < p->line_map)
+	while (x < p->col_map)
 	{
-		x = 0;
-		while (x < p->col_map)
+		y = 0;
+		while (y < p->line_map)
 		{
 			ret = ft_check_piece(p, x, y);
 			if (ret == 1)
@@ -137,9 +138,9 @@ int	ft_find_out_place(t_p *p)
 			}
 			else if (ret == 2)
 				return (0);
-			x++;
+			y++;
 		}
-		y++;
+		x++;
 	}
 	return (0);
 }
