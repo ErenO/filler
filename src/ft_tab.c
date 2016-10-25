@@ -6,49 +6,13 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 17:17:55 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/25 17:04:44 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-void print_map(char *map, int curse)
-{
-	int i;
 
-	i = 0;
-	dprintf(2, "\n");
-	while (map[i] != 0)
-	{
-		if (i == curse)
-		{
-			dprintf(2, "|");
-		}
-		dprintf(2, "%c", map[i]);
-		i++;
-	}
-	dprintf(2, "\n");
-}
-
-void	print_xy(char *map, int x, int y)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (map[j] != 0)
-	{
-		if (map[j] == '\n')
-			i++;
-		if (j % y == 0 && i == x)
-		{
-			dprintf(2, "|");
-		}
-		dprintf(2, "%c", map[j]);
-		j++;
-	}
-}
 
 /*
 	Check si la piece rentre, return 1 si c'est bon, 0 dans le cas contraire
@@ -118,7 +82,6 @@ int	ft_find_out_place(t_p *p)
 				// ft_putchar(' ');
 				// ft_putnbr(x);
 				// ft_putchar('\n');
-				print_xy(p->line, x, y);
 				printf("%d %d\n", x, y);
 				p->ptr = NULL;
 				p->ptr = ft_strnew(0);
