@@ -6,13 +6,13 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 12:53:25 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/25 13:06:44 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-
+//
 static void print_map(char *map, int curse)
 {
 	int i;
@@ -102,8 +102,6 @@ int		ft_check_piece(t_p *p, int line, int column)
 			{
 				// dprintf(2, "\np->line[map_place]: |%d|, map_place: |%d|, p->ch %c\n", p->line[map_place], map_place, p->ch);
 				// dprintf(2, "map %zu\n", ft_strlen(p->line));
-				print_map(p->line, map_place);
-				print_map(p->ptr, piece_place);
 				// dprintf(2, "2\n");
 				return (0);
 			}
@@ -120,6 +118,8 @@ int		ft_check_piece(t_p *p, int line, int column)
 	// dprintf(2, "\nm:%d\n", m);
 	if (count == 1)
 	{
+		print_map(p->line, line + ((p->col_map + 1) * (column)));
+		print_map(p->ptr, piece_place);
 		// dprintf(2, "3\n");
 		// dprintf(2, "\nOK\n");
 		return (1);
