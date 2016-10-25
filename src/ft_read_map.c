@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/24 08:46:19 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/25 12:56:04 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void 	ft_stock_map(char *line, t_p *p)
 	int i;
 
 	i = 0;
-	if (line[1] != ' ')
+	if (line[0] != ' ' && ft_strncmp(line, "Plateau", 7) != 0)
 	{
 		while ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
 		{
@@ -97,8 +97,12 @@ void 	ft_stock_map(char *line, t_p *p)
 			i++;
 		}
 		// dprintf(2, "lol%d, %d\n", ft_strncmp(line, "Piece", 5), p->check_map);
+		// dprintf(2, "check_map : %d\n", p->check_map);
 		if (ft_strncmp(line, "Piece", 5) != 0 && !p->check_map)
+		{
+			// dprintf(2, "hello\n");
 			p->line = ft_strjoin(p->line, ft_strjoin(ft_strsub(line, i, ft_strlen(line) - i), "\n"));
+		}
 		else
 		{
 			if (p->check_map != 3)
@@ -136,8 +140,8 @@ void	ft_stock_piece(char *line, t_p *p, int i)
 		ret = ft_find_out_place(p);
 		if (ret == 1)
 		{
-			p->check_map = 3;
-			}
+			p->check_map = 0;
+		}
 	}
 	// dprintf(2, "\np->piece_size: %d\np->check_map: %d\np->line_piece: %d\n", p->piece_size, p->check_map, p->line_piece);
 }
