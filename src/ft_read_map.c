@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 13:02:12 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/26 09:48:47 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	init_struct_p(t_p *p)
 	p->col_piece = 0;
 	p->line_piece = 0;
 	p->piece = 0;
+	p->read = 0;
 	p->check_map = 0;
 	p->nb = 0;
 	p->tab = NULL;
@@ -53,13 +54,9 @@ void	ft_map_size(char *line, t_p *p)
 
 	j = 8;
 	p->line_map = ft_atoi(line + 8);
-	// dprintf(2, "\n\n%d\n", p->i);
 	while (line[j] >= '0' && line[j] <= '9')
-	{
 		j++;
-	}
 	p->col_map = ft_atoi(line + j);
-	// dprintf(2, "\n\n%d\n", p->j);
 }
 
 /* Connaitre la taille de la piece */
@@ -84,31 +81,30 @@ void	ft_piece_big_size(char *line, t_p *p)
 
 /* stocker la map dans p->line */
 
-void 	ft_stock_map(char *line, t_p *p)
+char 	*ft_stock_map(char *line, t_p *p)
 {
 	int i;
+	int j;
 
 	i = 0;
-	if (line[0] != ' ' && ft_strncmp(line, "Plateau", 7) != 0)
+	j = 0;
+	if (ft_strncmp(line, "Plateau", 7) == 0)
 	{
-		while ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
+		get_next_line(0, &line);
+		get_next_line(0, &line);
+		if (ft_strncmp(line, "    0", 5) != 0)
 		{
-			// dprintf(2, "%c", line[i]);
-			i++;
-		}
-		// dprintf(2, "lol%d, %d\n", ft_strncmp(line, "Piece", 5), p->check_map);
-		// dprintf(2, "check_map : %d\n", p->check_map);
-		if (ft_strncmp(line, "Piece", 5) != 0 && !p->check_map)
-		{
-			// dprintf(2, "hello\n");
-			p->line = ft_strjoin(p->line, ft_strjoin(ft_strsub(line, i, ft_strlen(line) - i), "\n"));
-		}
-		else
-		{
-			if (p->check_map != 3)
-				p->check_map = 1;
+			while (get_next_line(0, &line) == 1 && j < p->line_map)
+			{
+				while ((line[i] >= '0' && line[i] <= '9') || line[i] == ' ')
+					i++;
+				p->line = ft_strjoin(p->line, ft_strjoin(ft_strsub(line, i, ft_strlen(line) - i), "\n"));
+				j++;
+				dprintf(2, "%s\n", line);
+			}
 		}
 	}
+	return (line);
 	// dprintf(2, "\np->line\n%s\n", p->line);
 }
 

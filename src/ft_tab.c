@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tab.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/25 18:14:40 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/26 10:07:10 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		ft_check_piece(t_p *p, int x, int y)
 	count = 0;
 	map_place = 0;
 	piece_place = 0;
-	dprintf(2, "A\n");
+	// dprintf(2, "A\n");
 	while (i < p->line_piece && (i + p->line_piece) < p->line_map)
 	{
 		j = 0;
@@ -70,8 +70,8 @@ int		ft_check_piece(t_p *p, int x, int y)
 		// print_map(p->ptr, piece_place);
 		while (j < p->col_piece && p->line[map_place] != 0)
 		{
-			dprintf(2, "%d\n", map_place);
-			print_map(p->line, map_place);
+			// dprintf(2, "%d\n", map_place);
+			// print_map(p->line, map_place);
 
 			if (p->line[map_place] == '\n' && p->ptr[piece_place] != '*')
 				break ;
@@ -79,18 +79,18 @@ int		ft_check_piece(t_p *p, int x, int y)
 				count++;
 			if ((j + p->col_piece) > p->col_map && p->ptr[piece_place] == '*')
 			{
-				dprintf(2, "B\n");
+				// dprintf(2, "B\n");
 				return (0);
 			}
 			if (p->line[map_place] == '\0')
 			{
-				dprintf(2, "B\n");
+				// dprintf(2, "B\n");
 				return (2);
 			}
 			if (p->line[map_place] != p->ch &&  p->line[map_place] != (p->ch + 32)
 				&& p->line[map_place] != '.' && p->line[map_place] != '\n')
 			{
-				dprintf(2, "B\n");
+				// dprintf(2, "B\n");
 				return (0);
 			}
 			map_place++;
@@ -99,7 +99,7 @@ int		ft_check_piece(t_p *p, int x, int y)
 		}
 		i++;
 	}
-	dprintf(2, "B\n");
+	// dprintf(2, "B\n");
 	return (count == 1) ? 1 : 0;
 }
 
