@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/23 21:56:11 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/10/27 14:13:57 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,19 @@ int main(void)
 	while (get_next_line(0, &line) == 1)
 	{
 		if (i == 0)
-		{
 			game_player(line, p);
-			// dprintf(2, "\np->ch: %c\n", p->ch);
-		}
 		if (i == 1)
 			ft_map_size(line, p);
 		if (i > 2)
 		{
 			ft_piece_big_size(line, p);
 			ft_stock_map(line, p);
-			// if (p->check_map != 3)
-			// {
-				// ft_piece_form_size(p);
-				// ft_piece_size(line, p);
-				ft_stock_piece(line, p, i);
-				// ft_find_out_place(p);
-			// }
+			ft_stock_piece(line, p);
 		}
-		// ft_putstr("2, 10");
 		dprintf(2, "%s\n", line);
 		i++;
 		j = 0;
 	}
-	// dprintf(2,"\np->line\n%s\np->ptr\n%s\n\n", p->line, p->ptr);
 	free(p);
 	return (0);
 }
