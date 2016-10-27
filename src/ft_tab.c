@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/26 18:17:54 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/26 18:25:25 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,33 @@ void print_map(char *map, int curse)
 	while (map[i] != 0)
 	{
 		if (i == curse)
+		{
 			dprintf(2, "|");
+		}
 		dprintf(2, "%c", map[i]);
 		i++;
 	}
 	dprintf(2, "\n");
 }
 
+void print_piece(char *piece, int curse)
+{
+	int i;
+
+	i = 0;
+	while (piece[i] != 0)
+	{
+		if (i == curse)
+			dprintf(2, "|");
+		dprintf(2, "%c", piece[i]);
+		i++;
+	}
+}
+
 /*
 	Check si la piece rentre, return 1 si c'est bon, 0 dans le cas contraire
 */
+// sta
 
 int		ft_check_piece(t_p *p, int x, int y)
 {
@@ -49,10 +66,16 @@ int		ft_check_piece(t_p *p, int x, int y)
 		j = 0;
 		map_place = y + ((p->col_map + 1) * (x + i));
 		piece_place = ((p->col_piece + 1) * i);
+		// print_map(p->ptr, piece_place);
 		while (j < p->col_piece && p->line[map_place] != 0)
 		{
-			if (p->line[map_place] == '\n' && p->ptr[piece_place] != '*')
+			dprintf(2, "%d\n", map_place);
+			print_map(p->line, map_place);
+
+			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '.')
 				break ;
+			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '*')
+				return (0);
 			if (p->line[map_place] == p->ch && p->ptr[piece_place] == '*')
 				count++;
 			if ((j + p->col_piece) > p->col_map && p->ptr[piece_place] == '*')
@@ -85,12 +108,13 @@ int	ft_find_out_place(t_p *p)
 	int y;
 	int ret;
 
+	x = 0;
 	y = 0;
 	ret = 0;
-	while (y < p->line_map)
+	while (x < p->col_map)
 	{
-		x = 0;
-		while (x < p->col_map)
+		y = 0;
+		while (y < p->line_map)
 		{
 			ret = ft_check_piece(p, x, y);
 			if (ret == 1)
@@ -105,9 +129,9 @@ int	ft_find_out_place(t_p *p)
 			}
 			else if (ret == 2)
 				return (0);
-			x++;
+			y++;
 		}
-		y++;
+		x++;
 	}
 	return (0);
 }

@@ -1,5 +1,5 @@
-seed = 2378
-X: error on input
+seed = 1318
+X: timedout
 ./players/carli.filler won
 Score:
-1AGAINST0
+170AGAINST1
