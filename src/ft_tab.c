@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/26 18:25:25 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/27 13:43:58 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,20 @@ int		ft_check_piece(t_p *p, int x, int y)
 		// print_map(p->ptr, piece_place);
 		while (j < p->col_piece && p->line[map_place] != 0)
 		{
-			dprintf(2, "%d\n", map_place);
-			print_map(p->line, map_place);
 
 			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '.')
 				break ;
 			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '*')
 				return (0);
 			if (p->line[map_place] == p->ch && p->ptr[piece_place] == '*')
+			{
 				count++;
+				// dprintf(2, "map_place %d count %d\n", map_place, count);
+				// dprintf(2, "map\n");
+				// print_map(p->line, map_place);
+				// dprintf(2, "piece\n");
+				// print_map(p->ptr, piece_place);
+			}
 			if ((j + p->col_piece) > p->col_map && p->ptr[piece_place] == '*')
 				return (0);
 			if (p->line[map_place] == '\0')
@@ -121,6 +126,7 @@ int	ft_find_out_place(t_p *p)
 			{
 				dprintf(2, "\nX : %d, Y : %d\n", x, y);
 				ft_put_solve(x, y);
+				dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
 				p->ptr = NULL;
 				p->line = NULL;
 				p->ptr = ft_strnew(0);
