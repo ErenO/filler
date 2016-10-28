@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/27 14:13:57 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/27 20:55:04 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "filler.h"
 #include "../includes/filler.h"
 #include <stdio.h>
 

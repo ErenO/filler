@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+         #
+#    By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 16:11:28 by eozdek            #+#    #+#              #
-#    Updated: 2016/10/21 16:06:01 by eozdek           ###   ########.fr        #
+#    Updated: 2016/10/27 22:28:54 by erenozdek        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= filler
-FILES	= get_next_line.c main.c ft_read_map.c ft_tab.c
+FILES	= get_next_line.c main.c ft_read_map.c ft_tab.c ft_algo.c
 SRCS	= $(addprefix src/, $(FILES))
 OBJS	= $(SRCS:src/%.c=.obj/%.o)
 INC		= -I includes -I libft/includes
