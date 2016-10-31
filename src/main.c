@@ -6,11 +6,14 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2016/10/27 14:13:57 by eozdek           ###   ########.fr       */
+=======
+/*   Updated: 2016/10/27 20:55:04 by erenozdek        ###   ########.fr       */
+>>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "filler.h"
 #include "../includes/filler.h"
 #include <stdio.h>
 

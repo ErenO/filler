@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_erroc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:25:57 by eozdek            #+#    #+#             */
-/*   Updated: 2016/10/21 13:26:13 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/10/27 22:28:09 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "filler.h"
+#include "../includes/filler.h"
 
-void	error()
+void	ft_error()
 {
 	write(1, "ERROR\n", 6);
 	exit(0);

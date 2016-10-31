@@ -3,72 +3,71 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tab.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2016/10/27 13:43:58 by eozdek           ###   ########.fr       */
+=======
+/*   Updated: 2016/10/28 18:36:06 by erenozdek        ###   ########.fr       */
+>>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-void print_map(char *map, int curse)
+void	ft_error()
 {
-	int i;
-
-	i = 0;
-	dprintf(2, "\n");
-	while (map[i] != 0)
-	{
-		if (i == curse)
-		{
-			dprintf(2, "|");
-		}
-		dprintf(2, "%c", map[i]);
-		i++;
-	}
-	dprintf(2, "\n");
+	write(1, "ERROR\n", 6);
+	exit(0);
 }
 
-void print_piece(char *piece, int curse)
-{
-	int i;
-
-	i = 0;
-	while (piece[i] != 0)
-	{
-		if (i == curse)
-			dprintf(2, "|");
-		dprintf(2, "%c", piece[i]);
-		i++;
-	}
-}
-
-/*
-	Check si la piece rentre, return 1 si c'est bon, 0 dans le cas contraire
-*/
-// sta
-
-int		ft_check_piece(t_p *p, int x, int y)
+int 	ft_check_piece_exceed_map(char *piece, int index_w, int index_l, int width, int length)
 {
 	int i;
 	int j;
-	int count;
-	int map_place;
-	int piece_place;
 
 	i = 0;
-	count = 0;
-	map_place = 0;
-	piece_place = 0;
-	while (i < p->line_piece && (i + p->line_piece) < p->line_map)
+	j = 0;
+	(void)length;
+	while (piece[i] != 0)
 	{
-		j = 0;
-		map_place = y + ((p->col_map + 1) * (x + i));
-		piece_place = ((p->col_piece + 1) * i);
-		// print_map(p->ptr, piece_place);
-		while (j < p->col_piece && p->line[map_place] != 0)
+		if (piece[i] == '\n')
+			j++;
+		// dprintf(2, "i:%d;j%d;width:%d;index_w:%d;index_l:%d;length:%d\n", i, j, width, index_w, index_l, length);
+		if (piece[i] == '*' && i % width >= index_w && length == 1)
 		{
+			print_map(piece, i);
+			return (0);
+		}
+	 	if (piece[i] == '*' && j >= index_l && length == 0)
+		{
+			print_map(piece, i);
+			return (0);
+		}
+		i += 1;
+	}
+	dprintf(2, "\n");
+	return (1);
+}
+
+int ft_algo_center_horizontal(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+	int center;
+
+	center = p->line_map / 2 + 1;
+	x = center - 2;
+	y = 0;
+	ret = 0;
+	while (x < center)
+	{
+		y = 0;
+		while (y < p->col_map)
+		{
+<<<<<<< HEAD
 
 			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '.')
 				break ;
@@ -93,48 +92,54 @@ int		ft_check_piece(t_p *p, int x, int y)
 			map_place++;
 			piece_place++;
 			j++;
+=======
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p, x, y);
+				return (1);
+			}
+			y++;
+>>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 		}
-		i++;
+		x++;
 	}
-	return (count == 1) ? 1 : 0;
+	return (0);
 }
 
-void ft_put_solve(int x, int y)
-{
-	ft_putnbr(x);
-	ft_putchar(' ');
-	ft_putnbr(y);
-	ft_putchar('\n');
-}
-
-int	ft_find_out_place(t_p *p)
+int ft_algo_center_vertical(t_p *p)
 {
 	int x;
 	int y;
 	int ret;
+	int center;
 
+	center = p->col_map / 2 + 1;
 	x = 0;
-	y = 0;
+	y = center - 2;
 	ret = 0;
-	while (x < p->col_map)
+	while (x < p->line_map)
 	{
-		y = 0;
-		while (y < p->line_map)
+		y = center - 2;
+		while (y < center)
 		{
 			ret = ft_check_piece(p, x, y);
 			if (ret == 1)
 			{
 				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+<<<<<<< HEAD
 				ft_put_solve(x, y);
 				dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
 				p->ptr = NULL;
 				p->line = NULL;
 				p->ptr = ft_strnew(0);
 				p->line = ft_strnew(0);
+=======
+				ft_put_solve(p, x, y);
+>>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 				return (1);
 			}
-			else if (ret == 2)
-				return (0);
 			y++;
 		}
 		x++;
