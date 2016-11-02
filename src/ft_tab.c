@@ -6,11 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2016/10/27 13:43:58 by eozdek           ###   ########.fr       */
-=======
-/*   Updated: 2016/10/28 18:36:06 by erenozdek        ###   ########.fr       */
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
+/*   Updated: 2016/11/02 01:14:31 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,32 +18,59 @@ void	ft_error()
 	exit(0);
 }
 
-int 	ft_check_piece_exceed_map(char *piece, int index_w, int index_l, int width, int length)
+int 	ft_check_piece_exceed_bottom_map(char *piece, int index_l)
 {
 	int i;
 	int j;
 
 	i = 0;
 	j = 0;
-	(void)length;
-	while (piece[i] != 0)
+	// (void)index_l;
+	// (void)piece;
+
+	while (j < index_l && piece[i] != 0)
 	{
 		if (piece[i] == '\n')
 			j++;
-		// dprintf(2, "i:%d;j%d;width:%d;index_w:%d;index_l:%d;length:%d\n", i, j, width, index_w, index_l, length);
-		if (piece[i] == '*' && i % width >= index_w && length == 1)
+		i++;
+	}
+	// dprintf(2, "piece\n%s\n", piece);
+	while (piece[i] != 0)
+	{
+		// dprintf(2, "%c", piece[i]);
+	 	if (piece[i] == '*')
 		{
-			print_map(piece, i);
-			return (0);
-		}
-	 	if (piece[i] == '*' && j >= index_l && length == 0)
-		{
-			print_map(piece, i);
+			// print_map(piece, i);
 			return (0);
 		}
 		i += 1;
 	}
-	dprintf(2, "\n");
+	// dprintf(2, "\n");
+	return (1);
+}
+
+int 	ft_check_piece_exceed_right_map(char *piece, int index_w, int width)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	// dprintf(2, "hello\n");
+	while (piece[i] != 0)
+	{
+		// if (i % width >= index_w)
+		// {
+			// dprintf(2, "i:%d;width:%d;index_w:%d\n", i, width, index_w);
+		// }
+		if (piece[i] == '*' && i % width >= index_w)
+		{
+			// print_map(piece, i);
+			return (0);
+		}
+		i += 1;
+	}
+	// dprintf(2, "\n");
 	return (1);
 }
 
@@ -58,8 +81,8 @@ int ft_algo_center_horizontal(t_p *p)
 	int ret;
 	int center;
 
-	center = p->line_map / 2 + 1;
-	x = center - 2;
+	center = p->line_map / 2;
+	x = center - 1;
 	y = 0;
 	ret = 0;
 	while (x < center)
@@ -67,32 +90,6 @@ int ft_algo_center_horizontal(t_p *p)
 		y = 0;
 		while (y < p->col_map)
 		{
-<<<<<<< HEAD
-
-			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '.')
-				break ;
-			if (p->line[map_place] == '\n' && p->ptr[piece_place] == '*')
-				return (0);
-			if (p->line[map_place] == p->ch && p->ptr[piece_place] == '*')
-			{
-				count++;
-				// dprintf(2, "map_place %d count %d\n", map_place, count);
-				// dprintf(2, "map\n");
-				// print_map(p->line, map_place);
-				// dprintf(2, "piece\n");
-				// print_map(p->ptr, piece_place);
-			}
-			if ((j + p->col_piece) > p->col_map && p->ptr[piece_place] == '*')
-				return (0);
-			if (p->line[map_place] == '\0')
-				return (2);
-			if (p->line[map_place] != p->ch &&  p->line[map_place] != (p->ch + 32)
-				&& p->line[map_place] != '.' && p->line[map_place] != '\n')
-				return (0);
-			map_place++;
-			piece_place++;
-			j++;
-=======
 			ret = ft_check_piece(p, x, y);
 			if (ret == 1)
 			{
@@ -101,7 +98,6 @@ int ft_algo_center_horizontal(t_p *p)
 				return (1);
 			}
 			y++;
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 		}
 		x++;
 	}
@@ -115,34 +111,269 @@ int ft_algo_center_vertical(t_p *p)
 	int ret;
 	int center;
 
-	center = p->col_map / 2 + 1;
+	center = p->col_map / 2;
 	x = 0;
-	y = center - 2;
+	y = center;
 	ret = 0;
 	while (x < p->line_map)
 	{
-		y = center - 2;
+		y = center;
 		while (y < center)
 		{
 			ret = ft_check_piece(p, x, y);
 			if (ret == 1)
 			{
 				dprintf(2, "\nX : %d, Y : %d\n", x, y);
-<<<<<<< HEAD
-				ft_put_solve(x, y);
-				dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
-				p->ptr = NULL;
-				p->line = NULL;
-				p->ptr = ft_strnew(0);
-				p->line = ft_strnew(0);
-=======
 				ft_put_solve(p, x, y);
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 				return (1);
 			}
 			y++;
 		}
 		x++;
 	}
+	return (0);
+}
+
+int ft_algo_left_vertical(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+	int center;
+
+	center = 0;
+	x = 0;
+	y = 0;
+	ret = 0;
+	while (x < p->line_map)
+	{
+		y = 0;
+		while (y < center)
+		{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p, x, y);
+				return (1);
+			}
+			y++;
+		}
+		x++;
+	}
+	return (0);
+}
+
+int ft_algo_quarter(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+
+	x = p->quarter_x;
+	y = p->quarter_y;
+	ret = 0;
+	while (x < p->quarter_xmax)
+	{
+		y = p->quarter_y;
+		while (y < p->quarter_ymax)
+		{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p ,x , y);
+				// dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
+				return (1);
+			}
+			else if (ret == 2)
+				return (0);
+			y++;
+		}
+		x++;
+	}
+	return (0);
+}
+
+int 	ft_algo_diagonal(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+	int center;
+
+	center = 2;
+	x = 0;
+	y = 0;
+	ret = 0;
+	while (x < p->line_map || y < p->col_map)
+	{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p, x, y);
+				return (1);
+			}
+			y++;
+		x++;
+	}
+	return (0);
+}
+int 	ft_algo_opp_diagonal(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+	int center;
+
+	center = 2;
+	x = p->line_map;
+	y = p->col_map;
+	ret = 0;
+	while (x > 0 || y > 0)
+	{
+		ret = ft_check_piece(p, x, y);
+		if (ret == 1)
+		{
+			dprintf(2, "\nX : %d, Y : %d\n", x, y);
+			ft_put_solve(p, x, y);
+			return (1);
+		}
+		y--;
+		x--;
+	}
+	return (0);
+}
+
+int ft_algo_left(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+
+	x = 0;
+	y = 0;
+	ret = 0;
+	while (y < p->col_map)
+	{
+		x = p->line_map;
+		while (x > 0)
+		{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p ,x , y);
+				// dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
+				p->piece = 0;
+				return (1);
+			}
+			else if (ret == 2)
+				return (0);
+			x--;
+		}
+		y++;
+	}
+	ft_putstr("0 0\n");
+	return (0);
+}
+
+int ft_algo_right(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+
+	x = 0;
+	y = p->col_map;
+	ret = 0;
+	while (y > 0)
+	{
+		x = p->line_map;
+		while (x > 0)
+		{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p ,x , y);
+				// dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
+				p->piece = 0;
+				return (1);
+			}
+			else if (ret == 2)
+				return (0);
+			x--;
+		}
+		y--;
+	}
+	ft_putstr("0 0\n");
+	return (0);
+}
+
+int ft_algo_top(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+
+	x = 0;
+	y = p->col_map;
+	ret = 0;
+	while (x < p->line_map)
+	{
+		y = p->col_map;
+		while (y > 0)
+		{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p ,x , y);
+				// dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
+				p->piece = 1;
+				return (1);
+			}
+			else if (ret == 2)
+				return (0);
+			y--;
+		}
+		x++;
+	}
+	ft_putstr("0 0\n");
+	return (0);
+}
+
+int ft_algo_bottom(t_p *p)
+{
+	int x;
+	int y;
+	int ret;
+
+	x = p->line_map;
+	y = 0;
+	ret = 0;
+	while (x > 0)
+	{
+		y = 0;
+		while (y < p->col_map)
+		{
+			ret = ft_check_piece(p, x, y);
+			if (ret == 1)
+			{
+				dprintf(2, "\nX : %d, Y : %d\n", x, y);
+				ft_put_solve(p ,x , y);
+				// dprintf(2, "map\n%s\npiece\n%s\n", p->line, p->ptr);
+				p->piece = 1;
+				return (1);
+			}
+			else if (ret == 2)
+				return (0);
+			y++;
+		}
+		x--;
+	}
+	ft_putstr("0 0\n");
 	return (0);
 }

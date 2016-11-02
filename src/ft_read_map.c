@@ -6,11 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2016/10/27 14:20:34 by eozdek           ###   ########.fr       */
-=======
-/*   Updated: 2016/10/28 13:21:12 by erenozdek        ###   ########.fr       */
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
+/*   Updated: 2016/11/01 17:00:49 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +14,15 @@
 
 void	init_struct_p(t_p *p)
 {
+	p->turn = 0;
+	p->firstX = 0;
+	p->firstY = 0;
+	p->quarter_x = 0;
+	p->quarter_y = 0;
+	p->quarter_xmax = 0;
+	p->quarter_ymax = 0;
+	p->algo_x = 0;
+	p->algo_y = 0;
 	p->line_map = 0;
 	p->col_map = 0;
 	p->col_piece = 0;
@@ -34,7 +39,7 @@ void	init_struct_p(t_p *p)
 
 /* Connaitre quel caractère on utilise */
 
-int		game_player(char *line, t_p *p)
+int game_player(char *line, t_p *p)
 {
 	if (line[10] == '1')
 	{
@@ -77,7 +82,6 @@ void	ft_piece_big_size(char *line, t_p *p)
 		while (line[j] >= '0' && line[j] <= '9')
 			j++;
 		p->col_piece  = ft_atoi(line + j);
-		p->piece = j;
 	}
 }
 
@@ -110,14 +114,6 @@ void ft_stock_piece(char *line, t_p *p)
 	// 	error();
 	if (p->check_map == 1)
 		p->piece_size--;
-<<<<<<< HEAD
-	// if (p->piece_size == 0 && p->check_map == 1)
-	// {
-		// p->check_map = 0;
-	// }
-	// if (p->piece > 0 && p->piece < i && (line[0] == '.' || line[0] == '*')) // p->piece < i ?
-=======
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 	if (p->put_line > 0)
 	{
 		p->put_line--;
@@ -126,27 +122,6 @@ void ft_stock_piece(char *line, t_p *p)
 	if (ft_strncmp(line, "Piece", 5) == 0 && p->put_line == -1)
 	{
 		p->put_line = p->line_piece;
-<<<<<<< HEAD
-		dprintf(2, "put_line %d\n", p->put_line);
-	}
-		// dprintf(2, "piece length %zu\n", ft_strlen(p->ptr));
-		if (p->ptr == NULL)
-		{
-			p->ptr = ft_strnew(0);
-		}
-		if (p->put_line == 0)
-		{
-			dprintf(2, "piece\n%shello\n", p->ptr);
-			ret = ft_find_out_place(p);
-			p->put_line = -1;
-		}
-		if (ret == 1)
-		{
-			p->check_map = 0;
-		}
-
-	// dprintf(2, "\np->piece_size: %d\np->check_map: %d\np->line_piece: %d\n", p->piece_size, p->check_map, p->line_piece);
-=======
 		// dprintf(2, "put_line %d\n", p->put_line);
 	}
 	if (p->ptr == NULL)
@@ -163,5 +138,4 @@ void ft_stock_piece(char *line, t_p *p)
 	{
 		p->check_map = 0;
 	}
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
 }

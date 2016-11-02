@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   filler.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2016/10/27 14:13:33 by eozdek           ###   ########.fr       */
-=======
-/*   Updated: 2016/10/28 13:31:30 by erenozdek        ###   ########.fr       */
->>>>>>> bca124e0e88eb9f693e56e654baaf542c4bb2e23
+/*   Updated: 2016/11/01 17:43:23 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +17,15 @@
 
 typedef struct	s_p
 {
+	int 	turn;
+	int		firstX;
+	int		firstY;
+	int		quarter_x;
+	int		quarter_y;
+	int		quarter_xmax;
+	int 	quarter_ymax;
+	int		algo_x;
+	int		algo_y;
 	int		put_line;
 	int		put_col;
 	int		line_map;
@@ -39,6 +44,9 @@ typedef struct	s_p
 	char	*line; // la map
 }				t_p;
 
+int 		ft_check_piece_exceed_bottom_map(char *piece, int index_l);
+int 		ft_check_piece_exceed_right_map(char *piece, int index_w, int width);
+int 		ft_algo_left_vertical(t_p *p);
 void		init_struct_p(t_p *p);
 void		ft_map_size(char *line, t_p *p);
 void		ft_piece_big_size(char *line, t_p *p);
@@ -55,5 +63,11 @@ int			ft_find_out_place(t_p *p);
 int			ft_find_last_move(t_p *p);
 int			ft_algo_center_horizontal(t_p *p);
 int			ft_algo_center_vertical(t_p *p);
-
+int 		ft_algo_quarter(t_p *p);
+int 		ft_algo_diagonal(t_p *p);
+int 	ft_algo_opp_diagonal(t_p *p);
+int ft_algo_left(t_p *p);
+int ft_algo_right(t_p *p);
+int ft_algo_bottom(t_p *p);
+int ft_algo_top(t_p *p);
 #endif
