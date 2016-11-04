@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   filler.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/03 20:56:54 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/05 00:25:54 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ int			ft_algo_bottom(t_p *p);
 int			ft_algo_top_left(t_p *p);
 int			ft_algo_top_right(t_p *p);
 int			ft_algo_middle_top(t_p *p);
+int			ft_algo_middle_bottom(t_p *p);
+int ft_algo_bottom_right(t_p *p);
 
 #endif

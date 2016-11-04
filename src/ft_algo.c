@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/03 22:30:07 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/05 00:51:58 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,14 @@ void print_piece(char *piece, int curse)
 
 static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 {
+	int i;
 	int j;
+	// int len;
 
+	i = 0;
 	j = 0;
+	// len = ft_strlen(p->line);
+		// dprintf(2, "A\n");
 	while (j < (p->col_piece) && p->line[(*map_place)] != 0)
 	{
 		// if (p->ptr[(*piece_place)] == '\n')
@@ -57,23 +62,46 @@ static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 		// if (p->ptr[(*piece_place)] == '\0')
 		// 	return (0);
 			// dprintf(2, "%c", p->line[(*map_place)]);
-		if (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '.')
-			break ;
-		(*count) += (p->line[(*map_place)] == p->ch && p->ptr[(*piece_place)] == '*') ? 1 : 0;
-		if (p->line[(*map_place)] == '\0')
+		if (p->line[(*map_place)] != '\n' && i != 1)
 		{
-			// dprintf(2, "\n");
-			return (2);
-		}
-		if ((p->line[(*map_place)] != p->ch &&  p->line[(*map_place)] != (p->ch + 32)
-			&& p->line[(*map_place)] != '.' && p->line[(*map_place)] != '\n')
-			|| ((j + p->col_piece) > p->col_map && p->ptr[(*piece_place)] == '*')
-			|| (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '*'))
+			// if (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '.')
+			// {
+			// 	break ;
+			// }
+			(*count) += (p->line[(*map_place)] == p->ch && p->ptr[(*piece_place)] == '*') ? 1 : 0;
+			if (p->line[(*map_place)] == '\0')
 			{
-				// dprintf(2, "\n");
+				// dprintf(2, "B\n");
+				return (2);
+			}
+			if ((p->line[(*map_place)] != p->ch &&  p->line[(*map_place)] != (p->ch + 32)
+			&& p->line[(*map_place)] != '.' && p->line[(*map_place)] != '\n') && p->ptr[(*piece_place)] == '*')
+			{
+				// dprintf(2, "C\n");
 				return (0);
 			}
-		(*map_place) += 1;
+			if ((p->line[(*map_place)] == p->opp || p->line[(*map_place)] == (p->opp + 32)) && p->ptr[(*piece_place)] == '*')
+			return (0);
+			if (((j + p->col_piece) > p->col_map && p->ptr[(*piece_place)] == '*'))
+			{
+				// dprintf(2, "D\n");
+				return (0);
+			}
+			if (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '*')
+			{
+				// dprintf(2, "E\n");
+				return (0);
+			}
+			(*map_place) += 1;
+		}
+		else
+		{
+			i = 1;
+			if (p->ptr[(*piece_place)] == '*')
+			{
+				return (0);
+			}
+		}
 		(*piece_place) += 1;
 		j++;
 	}
@@ -109,18 +137,22 @@ int		ft_check_piece(t_p *p, int x, int y)
 		if (ft_curse_ok(p, &count, &map_place, &piece_place) == 0)
 		{
 			// dprintf(2, "count %d, x %d, y %d\n", count, x, y);
+			// dprintf(2, "\n");
 			return (0);
 		}
 		i++;
 	}
+	// dprintf(2, "\n");
 	// dprintf(2, "count %d, x %d, y %d\n", count, x, y);
 	return (count == 1) ? 1 : 0;
 }
 
 void ft_put_solve(t_p *p, int x, int y)
 {
+
 	dprintf(2, "\nX : %d, Y : %d\n", x, y);
 	p->turn++;
+	dprintf(2, "p->turn %d\n", p->turn);
 	ft_putnbr(x);
 	ft_putchar(' ');
 	ft_putnbr(y);
@@ -135,20 +167,39 @@ int	ft_find_out_place(t_p *p)
 {
 
 	//map01 O
+	// if (p->turn < 3)
+	// 	return (ft_algo_middle_bottom(p));
+	//map02 X
 	// if (p->piece == 0)
-	// 	return (ft_algo_bottom(p));
+		// return (ft_algo_bottom(p));
 	// else
+		// return (ft_algo_right(p));
+	// if (p->turn < 30)
+	// 	return (ft_algo_top_left(p));
+	// if (p->turn < 100)
 	// 	return (ft_algo_right(p));
+	// if (p->turn < 200)
+	// 	return (ft_algo_bottom(p));
+	// if (p->turn >= 200)
+	// 	return (ft_algo_left(p));
 	//map01 X
 	// if (p->turn < 5)
-	// 	return (ft_algo_top_left(p));
+	// 	return (ft_algo_middle_top(p));
+	// if (p->turn < 10)
+	// 	return (ft_algo_left(p));
+	// if (p->piece == 0)
+	// {
+	// 	return (ft_algo_top_right(p));
+	// }
+	// else
+	// 	return (ft_algo_left(p));
+	//map02 O
+	if (p->turn < 20)
+		return (ft_algo_bottom_right(p));
 	if (p->piece == 0)
-	{
-			return (ft_algo_top_right(p));
-	}
+		return (ft_algo_top_right(p));
 	else
 		return (ft_algo_left(p));
-
 	ft_putstr("0 0\n");
 	return (0);
 }
