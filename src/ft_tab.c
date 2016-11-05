@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/05 00:35:27 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/05 22:26:34 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int ft_algo_right(t_p *p)
 			if (ret == 1)
 			{
 				ft_put_solve(p ,x , y);
-				p->piece = 0;
+				p->piece = 1;
 				return (1);
 			}
 			else if (ret == 2)
@@ -201,7 +201,7 @@ int ft_algo_top_left(t_p *p)
 			if (ret == 1)
 			{
 				ft_put_solve(p ,x , y);
-				p->piece = 1;
+				p->piece = 0;
 				return (1);
 			}
 			else if (ret == 2)
@@ -266,7 +266,7 @@ int ft_algo_bottom(t_p *p)
 			if (ret == 1)
 			{
 				ft_put_solve(p ,x , y);
-				p->piece = 1;
+				p->piece = 0;
 				return (1);
 			}
 			else if (ret == 2)
@@ -297,7 +297,7 @@ int ft_algo_bottom_right(t_p *p)
 			if (ret == 1)
 			{
 				ft_put_solve(p ,x , y);
-				p->piece = 1;
+				p->piece = 0;
 				return (1);
 			}
 			else if (ret == 2)

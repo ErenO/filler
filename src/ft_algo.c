@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/05 00:51:58 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/05 22:34:38 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,7 +165,27 @@ void ft_put_solve(t_p *p, int x, int y)
 
 int	ft_find_out_place(t_p *p)
 {
-
+	//map00 X
+	// if (p->turn < 30)
+	// {
+	// 	if (p->turn < 10)
+	// 		return (ft_algo_top_left(p));
+	// 	if (p->piece == 0)
+	// 		return (ft_algo_top_left(p));
+	// 	else
+	// 		return (ft_algo_left(p));
+	// }
+	// else
+	// {
+	// 	return (ft_algo_right(p));
+	// }
+	// map00 O
+	if (p->turn < 5)
+		return (ft_algo_top_left(p));
+	if (p->piece == 0)
+		return (ft_algo_right(p));
+	else
+		return (ft_algo_bottom(p));
 	//map01 O
 	// if (p->turn < 3)
 	// 	return (ft_algo_middle_bottom(p));
@@ -194,12 +214,13 @@ int	ft_find_out_place(t_p *p)
 	// else
 	// 	return (ft_algo_left(p));
 	//map02 O
-	if (p->turn < 20)
-		return (ft_algo_bottom_right(p));
-	if (p->piece == 0)
-		return (ft_algo_top_right(p));
-	else
-		return (ft_algo_left(p));
+	// if (p->turn < 20)
+	// 	return (ft_algo_bottom_right(p));
+	// if (p->piece == 0)
+	// 	return (ft_algo_top_right(p));
+	// else
+	// 	return (ft_algo_left(p));
+
 	ft_putstr("0 0\n");
 	return (0);
 }
