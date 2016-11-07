@@ -1,4 +1,4 @@
-$$$ exec p1 : [./filler]
+$$$ exec p2 : [./filler]
 Plateau 15 17:
     01234567890123456
 000 .................
@@ -10,40 +10,19 @@ Plateau 15 17:
 006 .................
 007 .................
 008 ..O..............
-009 .................
+009 .OO..............
 010 .................
 011 .................
 012 ..............X..
 013 .................
 014 .................
-Piece 2 1:
-*
-
-X : 7, Y : 2
-p->turn 1
-*
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .................
-005 .................
-006 .................
-007 ..O..............
-008 ..O..............
-009 .................
-010 .................
-011 .................
-012 ............XXX..
-013 .................
-014 .................
 Piece 2 2:
 **
+curse 14
+p->ch_place 2
 
-X : 7, Y : 1
-p->turn 2
+X : 12, Y : 13
+p->turn 1
 ..
 Plateau 15 17:
     01234567890123456
@@ -54,19 +33,91 @@ Plateau 15 17:
 004 .................
 005 .................
 006 .................
-007 .OO..............
+007 .................
 008 ..O..............
-009 .................
+009 .OOO.............
 010 .................
-011 ............X....
+011 .................
+012 .............XX..
+013 .................
+014 .................
+Piece 2 3:
+***
+p->ch_place 2
+
+X : 11, Y : 12
+p->turn 2
+**.
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 .................
+008 ..OO.............
+009 .OOO.............
+010 .................
+011 ............XXX..
+012 ............XXX..
+013 .................
+014 .................
+Piece 1 3:
+p->ch_place 2
+
+X : 11, Y : 11
+p->turn 3
+**.
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 .................
+008 ..OO.............
+009 .OOOO............
+010 .................
+011 ...........XXXX..
+012 ............XXX..
+013 .................
+014 .................
+Piece 2 3:
+*..
+p->ch_place 2
+
+X : 10, Y : 11
+p->turn 4
+*..
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 .................
+008 ..OOO.O..........
+009 .OOOOOO..........
+010 ...........X.....
+011 ...........XXXX..
 012 ............XXX..
 013 .................
 014 .................
 Piece 2 1:
 *
+p->ch_place 2
 
-X : 6, Y : 1
-p->turn 3
+X : 9, Y : 11
+p->turn 5
 *
 Plateau 15 17:
     01234567890123456
@@ -76,139 +127,45 @@ Plateau 15 17:
 003 .................
 004 .................
 005 .................
-006 .O...............
-007 .OO..............
-008 ..O..............
-009 .................
-010 ............X....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 2 2:
-.*
-
-X : 5, Y : 0
-p->turn 4
-**
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .................
-005 .O...............
-006 OO...............
-007 .OO..............
-008 ..O..............
-009 .................
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 8 1:
-.
-.
-.
-.
-.
-*
-*
-
-X : 0, Y : 0
-p->turn 5
-.
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .................
-005 OO...............
-006 OO...............
-007 .OO..............
-008 ..O..............
-009 ...........X.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 1 3:
-
-X : 7, Y : 2
-p->turn 6
-***
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .................
-005 OO...............
-006 OO...............
-007 .OOOO............
-008 ..O..............
-009 ..........XX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 2 2:
-.*
-
-X : 8, Y : 1
-p->turn 7
-**
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .................
-005 OO...............
-006 OO...............
-007 .OOOO............
-008 ..O..............
-009 .OO......XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 1 2:
-
-X : 7, Y : 4
-p->turn 8
-**
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .................
-005 OO...............
-006 OO...............
-007 .OOOOO...........
-008 ..O......X.......
-009 .OO......XXX.....
-010 ...........XX....
-011 ............X....
+006 .................
+007 .................
+008 ..OOO.O..........
+009 .OOOOOOOO..X.....
+010 ...........X.....
+011 ...........XXXX..
 012 ............XXX..
 013 .................
 014 .................
 Piece 2 3:
-.**
+**.
+p->ch_place 2
 
-X : 9, Y : 1
-p->turn 9
+X : 11, Y : 14
+p->turn 6
+.**
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 .................
+008 ..OOO.O..........
+009 .OOOOOOOOOOX.....
+010 ...........X.....
+011 ...........XXXXX.
+012 ............XXXXX
+013 .................
+014 .................
+Piece 2 3:
+***
+p->ch_place 2
+
+X : 9, Y : 11
+p->turn 7
 ...
 Plateau 15 17:
     01234567890123456
@@ -217,22 +174,23 @@ Plateau 15 17:
 002 .................
 003 .................
 004 .................
-005 OO...............
-006 OO...............
-007 .OOOOO..XX.......
-008 ..O.....XX.......
-009 .OOO.....XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
+005 .................
+006 .................
+007 .................
+008 ..OOO.O..........
+009 .OOOOOOOOOOXXX...
+010 ..........OX.....
+011 ...........XXXXX.
+012 ............XXXXX
 013 .................
 014 .................
-Piece 2 3:
-..*
+Piece 2 1:
+*
+p->ch_place 2
 
-X : 6, Y : 4
-p->turn 10
-.**
+X : 11, Y : 16
+p->turn 8
+*
 Plateau 15 17:
     01234567890123456
 000 .................
@@ -240,22 +198,22 @@ Plateau 15 17:
 002 .................
 003 .................
 004 .................
-005 OO...............
-006 OO....O..........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 .OOO.....XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
+005 .................
+006 .................
+007 .................
+008 ..OOO.O..OO......
+009 .OOOOOOOOOOXXX...
+010 ..........OX.....
+011 ...........XXXXXX
+012 ............XXXXX
 013 .................
 014 .................
-Piece 2 2:
+Piece 1 2:
+p->ch_place 2
+
+X : 9, Y : 13
+p->turn 9
 **
-
-X : 9, Y : 0
-p->turn 11
-..
 Plateau 15 17:
     01234567890123456
 000 .................
@@ -263,20 +221,68 @@ Plateau 15 17:
 002 .................
 003 .................
 004 .................
-005 OO...............
-006 OO....OX.........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 OOOO.....XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
+005 .................
+006 .................
+007 .................
+008 ..OOO.O..OO......
+009 .OOOOOOOOOOXXXX..
+010 .........OOX.....
+011 ...........XXXXXX
+012 ............XXXXX
+013 .................
+014 .................
+Piece 1 3:
+p->ch_place 2
+
+X : 9, Y : 14
+p->turn 10
+**.
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 ...........O.....
+008 ..OOO.O..OOO.....
+009 .OOOOOOOOOOXXXXX.
+010 .........OOX.....
+011 ...........XXXXXX
+012 ............XXXXX
+013 .................
+014 .................
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 10, Y : 16
+p->turn 11
+*
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 ...........O.....
+008 ..OOO.O..OOO.....
+009 .OOOOOOOOOOXXXXX.
+010 .........OOX....X
+011 ..........OXXXXXX
+012 ............XXXXX
 013 .................
 014 .................
 Piece 2 3:
-**.
+.**
+p->ch_place 2
 
-X : 5, Y : 4
+X : 8, Y : 14
 p->turn 12
 .**
 Plateau 15 17:
@@ -286,65 +292,22 @@ Plateau 15 17:
 002 .................
 003 .................
 004 .................
-005 OO..OO.X.........
-006 OO...OOX.........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 OOOO.....XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 1 3:
-
-X : 9, Y : 3
-p->turn 13
-***
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 ......XX.........
-005 OO..OOXX.........
-006 OO...OOX.........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 OOOOOO...XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
-014 .................
-Piece 1 3:
-
-X : 9, Y : 5
-p->turn 14
-***
-Plateau 15 17:
-    01234567890123456
-000 .................
-001 .................
-002 .................
-003 .................
-004 .....XXX.........
-005 OO..OOXX.........
-006 OO...OOX.........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 OOOOOOOO.XXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
+005 .................
+006 .................
+007 ...........OO....
+008 ..OOO.O..OOO...XX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX....X
+011 ..........OXXXXXX
+012 ............XXXXX
 013 .................
 014 .................
 Piece 2 3:
 **.
+p->ch_place 2
 
-X : 9, Y : 7
-p->turn 15
+X : 10, Y : 15
+p->turn 13
 ...
 Plateau 15 17:
     01234567890123456
@@ -352,41 +315,1485 @@ Plateau 15 17:
 001 .................
 002 .................
 003 .................
-004 ....XXXX.........
-005 OO..OOXX.........
-006 OO...OOX.........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 OOOOOOOOOXXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
+004 .................
+005 .................
+006 .................
+007 ...........OO....
+008 ..OOO.O..OOO...XX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX...XX
+011 .........OOXXXXXX
+012 ............XXXXX
 013 .................
 014 .................
-Piece 1 2:
+Piece 2 3:
+.*.
+p->ch_place 2
 
-X : 6, Y : 4
-p->turn 16
+X : 12, Y : 14
+p->turn 14
+.**
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 ...........OOO...
+008 ..OOO.O..OOO...XX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX...XX
+011 .........OOXXXXXX
+012 ............XXXXX
+013 ...............XX
+014 .................
+Piece 1 2:
+p->ch_place 2
+
+X : 8, Y : 14
+p->turn 15
 **
 Plateau 15 17:
     01234567890123456
 000 .................
 001 .................
 002 .................
-003 ....X............
-004 ....XXXX.........
-005 OO..OOXX.........
-006 OO..OOOX.........
-007 .OOOOOOXXX.......
-008 ..O.....XX.......
-009 OOOOOOOOOXXX.....
-010 ...........XX....
-011 ............X....
-012 ............XXX..
-013 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 ...........OOO...
+008 ..OOO.O..OOO..XXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX...XX
+011 .........OOXXXXXX
+012 ..........O.XXXXX
+013 ...............XX
 014 .................
-Piece 4 13:
-.............
-.............
-..........*..
-........****.
+Piece 2 3:
+*..
+p->ch_place 2
+
+X : 7, Y : 16
+p->turn 16
+*..
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 ...........OOOO.X
+008 ..OOO.O..OOO..XXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX...XX
+011 .........OOXXXXXX
+012 ..........O.XXXXX
+013 ...............XX
+014 .................
+Piece 1 3:
+p->ch_place 2
+
+X : 10, Y : 13
+p->turn 17
+***
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 .................
+007 ...........OOOO.X
+008 ..OOO.O..OOO..XXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 ..........OOXXXXX
+013 ...............XX
+014 .................
+Piece 2 3:
+.**
+p->ch_place 2
+
+X : 6, Y : 14
+p->turn 18
+.**
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 .................
+006 ...............XX
+007 ...........OOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 ..........OOXXXXX
+013 ...............XX
+014 .................
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 5, Y : 15
+p->turn 19
+.*
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 .................
+005 ...............XX
+006 ...............XX
+007 ...........OOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .........OOOXXXXX
+013 ...............XX
+014 .................
+Piece 2 3:
+.**
+p->ch_place 2
+
+X : 4, Y : 13
+p->turn 20
+***
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 ..............XX.
+005 .............XXXX
+006 ...............XX
+007 .........OOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .........OOOXXXXX
+013 ...............XX
+014 .................
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 4, Y : 16
+p->turn 21
+*
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 ..............XXX
+005 .............XXXX
+006 ...............XX
+007 .........OOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ...............XX
+014 .................
+Piece 2 2:
+..
+p->ch_place 2
+
+X : 5, Y : 14
+p->turn 22
+**
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 ..............XXX
+005 .............XXXX
+006 ..............XXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ...............XX
+014 .................
+Piece 1 2:
+p->ch_place 2
+
+X : 13, Y : 14
+p->turn 23
+**
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .................
+004 ..............XXX
+005 .............XXXX
+006 ..............XXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ...........OO.XXX
+014 .................
+Piece 2 3:
+..*
+p->ch_place 2
+
+X : 3, Y : 14
+p->turn 24
+..*
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 ................X
+004 ..............XXX
+005 .............XXXX
+006 ..............XXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ...........OOOXXX
+014 ............OO...
+Piece 2 3:
+***
+p->ch_place 2
+
+X : 3, Y : 13
+p->turn 25
+**.
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .............XXXX
+004 .............XXXX
+005 .............XXXX
+006 ..............XXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ...........OOOXXX
+014 ...........OOO...
+Piece 1 3:
+p->ch_place 2
+
+X : 6, Y : 12
+p->turn 26
+***
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 .............XXXX
+004 .............XXXX
+005 .............XXXX
+006 ............XXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 ...........OOO...
+Piece 1 3:
+p->ch_place 2
+
+X : 3, Y : 11
+p->turn 27
+***
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 ...........XXXXXX
+004 .............XXXX
+005 .............XXXX
+006 ............XXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 .........OOOOO...
+Piece 1 2:
+p->ch_place 2
+
+X : 4, Y : 12
+p->turn 28
+**
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 .................
+003 ...........XXXXXX
+004 ............XXXXX
+005 .............XXXX
+006 ...........OXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 .........OOOOO...
+Piece 2 2:
+*.
+p->ch_place 2
+
+X : 2, Y : 16
+p->turn 29
+*.
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 .................
+002 ................X
+003 ...........XXXXXX
+004 ............XXXXX
+005 .............XXXX
+006 ...........OXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 .........OOOOOO..
+Piece 2 2:
+*.
+p->ch_place 2
+
+X : 1, Y : 16
+p->turn 30
+*.
+Plateau 15 17:
+    01234567890123456
+000 .................
+001 ................X
+002 ................X
+003 ...........XXXXXX
+004 ............XXXXX
+005 ..........OO.XXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 .........OOOOOO..
+Piece 2 3:
+***
+p->ch_place 2
+
+X : 0, Y : 14
+p->turn 31
+.**
+Plateau 15 17:
+    01234567890123456
+000 ..............XXX
+001 ...............XX
+002 ................X
+003 ...........XXXXXX
+004 ............XXXXX
+005 ..........OO.XXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 .........OOOOOOO.
+Piece 1 3:
+p->ch_place 2
+
+X : 2, Y : 14
+p->turn 32
+***
+Plateau 15 17:
+    01234567890123456
+000 ..............XXX
+001 ...............XX
+002 ..............XXX
+003 ...........XXXXXX
+004 ............XXXXX
+005 ..........OO.XXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .........OOOOOXXX
+014 .........OOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 1, Y : 14
+p->turn 33
+**
+Plateau 15 17:
+    01234567890123456
+000 ..............XXX
+001 ..............XXX
+002 ..............XXX
+003 ...........XXXXXX
+004 ............XXXXX
+005 ..........OO.XXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ......OOOOOOOOXXX
+014 .........OOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 0, Y : 13
+p->turn 34
+**
+Plateau 15 17:
+    01234567890123456
+000 .............XXXX
+001 ..............XXX
+002 ..............XXX
+003 ...........XXXXXX
+004 ............XXXXX
+005 ..........OOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ......OOOOOOOOXXX
+014 .........OOOOOOOO
+Piece 2 2:
+*.
+p->ch_place 2
+
+X : 0, Y : 13
+p->turn 35
+*.
+Plateau 15 17:
+    01234567890123456
+000 .............XXXX
+001 .............XXXX
+002 ..............XXX
+003 ...........XXXXXX
+004 ............XXXXX
+005 ..........OOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ......OOOOOOOOXXX
+014 ........OOOOOOOOO
+Piece 1 3:
+p->ch_place 2
+
+X : 2, Y : 13
+p->turn 36
+**.
+Plateau 15 17:
+    01234567890123456
+000 .............XXXX
+001 .............XXXX
+002 .............XXXX
+003 ...........XXXXXX
+004 ..........O.XXXXX
+005 ........OOOOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ......OOOOOOOOXXX
+014 ........OOOOOOOOO
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 0, Y : 12
+p->turn 37
+..
+Plateau 15 17:
+    01234567890123456
+000 ............XXXXX
+001 .............XXXX
+002 .............XXXX
+003 ...........XXXXXX
+004 ..........O.XXXXX
+005 ........OOOOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .....OOOOOOOOOXXX
+014 ......OOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 1, Y : 12
+p->turn 38
+**
+Plateau 15 17:
+    01234567890123456
+000 ............XXXXX
+001 ............XXXXX
+002 .............XXXX
+003 ...........XXXXXX
+004 .........OOOXXXXX
+005 ........OOOOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .....OOOOOOOOOXXX
+014 ......OOOOOOOOOOO
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 2, Y : 12
+p->turn 39
+..
+Plateau 15 17:
+    01234567890123456
+000 ............XXXXX
+001 ............XXXXX
+002 ............XXXXX
+003 ...........XXXXXX
+004 .........OOOXXXXX
+005 ........OOOOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOX.XXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .....OOOOOOOOOXXX
+014 .....OOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 9, Y : 12
+p->turn 40
+*
+Plateau 15 17:
+    01234567890123456
+000 ............XXXXX
+001 ............XXXXX
+002 ............XXXXX
+003 .........OOXXXXXX
+004 .........OOOXXXXX
+005 ........OOOOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .....OOOOOOOOOXXX
+014 .....OOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 0, Y : 11
+p->turn 41
+**
+Plateau 15 17:
+    01234567890123456
+000 ...........XXXXXX
+001 ............XXXXX
+002 ............XXXXX
+003 .........OOXXXXXX
+004 .........OOOXXXXX
+005 ........OOOOOXXXX
+006 ..........OOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .....OOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 2 3:
+...
+p->ch_place 2
+
+X : 0, Y : 10
+p->turn 42
+.**
+Plateau 15 17:
+    01234567890123456
+000 ...........XXXXXX
+001 ...........XXXXXX
+002 ............XXXXX
+003 .........OOXXXXXX
+004 .........OOOXXXXX
+005 ........OOOOOXXXX
+006 .........OOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 .....OOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 2 3:
+..*
+p->ch_place 2
+
+X : 1, Y : 9
+p->turn 43
+***
+Plateau 15 17:
+    01234567890123456
+000 ...........XXXXXX
+001 ...........XXXXXX
+002 .........XXXXXXXX
+003 .........OOXXXXXX
+004 .........OOOXXXXX
+005 ........OOOOOXXXX
+006 .........OOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ....OOOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 1, Y : 10
+p->turn 44
+*
+Plateau 15 17:
+    01234567890123456
+000 ...........XXXXXX
+001 ..........XXXXXXX
+002 .........XXXXXXXX
+003 .........OOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 .........OOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 .......OOOOOXXXXX
+013 ....OOOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 0, Y : 10
+p->turn 45
+**
+Plateau 15 17:
+    01234567890123456
+000 ..........XXXXXXX
+001 ..........XXXXXXX
+002 .........XXXXXXXX
+003 .........OOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 .........OOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ......OOOOOOXXXXX
+013 ....OOOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 1, Y : 9
+p->turn 46
+*
+Plateau 15 17:
+    01234567890123456
+000 ..........XXXXXXX
+001 .........XXXXXXXX
+002 .......OOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 .........OOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ......OOOOOOXXXXX
+013 ....OOOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 2 3:
+**.
+p->ch_place 2
+
+X : 0, Y : 8
+p->turn 47
+**.
+Plateau 15 17:
+    01234567890123456
+000 ........XXXXXXXXX
+001 ........XXXXXXXXX
+002 .......OOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 .........OOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ...OO.OOOOOOXXXXX
+013 ...OOOOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 0, Y : 7
+p->turn 48
+**
+Plateau 15 17:
+    01234567890123456
+000 .......XXXXXXXXXX
+001 ........XXXXXXXXX
+002 .......OOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ...OO.OOOOOOXXXXX
+013 ...OOOOOOOOOOOXXX
+014 ....OOOOOOOOOOOOO
+Piece 1 3:
+p->ch_place 2
+
+X : 1, Y : 6
+p->turn 49
+***
+Plateau 15 17:
+    01234567890123456
+000 .......XXXXXXXXXX
+001 ......XXXXXXXXXXX
+002 .......OOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O..OOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ...OO.OOOOOOXXXXX
+013 ...OOOOOOOOOOOXXX
+014 ...OOOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 0, Y : 6
+p->turn 50
+*
+Plateau 15 17:
+    01234567890123456
+000 ......XXXXXXXXXXX
+001 ......XXXXXXXXXXX
+002 .......OOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ...OO.OOOOOOXXXXX
+013 ...OOOOOOOOOOOXXX
+014 ...OOOOOOOOOOOOOO
+Piece 2 3:
+.**
+p->ch_place 2
+
+X : 1, Y : 4
+p->turn 51
+.**
+Plateau 15 17:
+    01234567890123456
+000 ......XXXXXXXXXXX
+001 .....XXXXXXXXXXXX
+002 .....XXOOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .........OOXXXXXX
+011 .........OOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 ...OOOOOOOOOOOXXX
+014 ...OOOOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 0, Y : 5
+p->turn 52
+**
+Plateau 15 17:
+    01234567890123456
+000 .....XXXXXXXXXXXX
+001 .....XXXXXXXXXXXX
+002 .....XXOOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 .........OOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 ...OOOOOOOOOOOXXX
+014 ...OOOOOOOOOOOOOO
+Piece 2 3:
+***
+p->ch_place 2
+
+X : 0, Y : 3
+p->turn 53
+...
+Plateau 15 17:
+    01234567890123456
+000 ...XXXXXXXXXXXXXX
+001 .....XXXXXXXXXXXX
+002 .....XXOOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 .........OOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 .OOOOOOOOOOOOOXXX
+014 ..OOOOOOOOOOOOOOO
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 1, Y : 4
+p->turn 54
+..
+Plateau 15 17:
+    01234567890123456
+000 ...XXXXXXXXXXXXXX
+001 ....XXXXXXXXXXXXX
+002 .....XXOOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ........OOOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 .OOOOOOOOOOOOOXXX
+014 ..OOOOOOOOOOOOOOO
+Piece 1 3:
+p->ch_place 2
+
+X : 2, Y : 3
+p->turn 55
+.**
+Plateau 15 17:
+    01234567890123456
+000 ...XXXXXXXXXXXXXX
+001 ....XXXXXXXXXXXXX
+002 ....XXXOOXXXXXXXX
+003 .......OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ........OOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ........OOOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 ..OOOOOOOOOOOOOOO
+Piece 2 3:
+.**
+p->ch_place 2
+
+X : 2, Y : 2
+p->turn 56
+***
+Plateau 15 17:
+    01234567890123456
+000 ...XXXXXXXXXXXXXX
+001 ....XXXXXXXXXXXXX
+002 ...XXXXOOXXXXXXXX
+003 ..XXX..OOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ......OOOOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ........OOOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 ..OOOOOOOOOOOOOOO
+Piece 2 3:
+..*
+p->ch_place 2
+
+X : 2, Y : 4
+p->turn 57
+.**
+Plateau 15 17:
+    01234567890123456
+000 ...XXXXXXXXXXXXXX
+001 ....XXXXXXXXXXXXX
+002 ...XXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ......OOOOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ........OOOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 3:
+.**
+p->ch_place 2
+
+X : 0, Y : 1
+p->turn 58
+.**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 ..XXXXXXXXXXXXXXX
+002 ...XXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ......OOOOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ......OOOOOXXXXXX
+012 ...OOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 1, Y : 1
+p->turn 59
+.*
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 .......OOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ......OOOOOOXXXXX
+007 ........OOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ..O...OOOOOXXXXXX
+012 ..OOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 2:
+*.
+p->ch_place 2
+
+X : 3, Y : 6
+p->turn 60
+*.
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ......XOOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ......OOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ..O...OOOOOXXXXXX
+012 ..OOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 3:
+...
+p->ch_place 2
+
+X : 3, Y : 4
+p->turn 61
+.**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 .....XXOOOOOXXXXX
+005 .......OOOOOOXXXX
+006 ......OOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ..O...OOOOOXXXXXX
+012 .OOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 4, Y : 4
+p->turn 62
+..
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ....XXXOOOOOXXXXX
+005 .....OOOOOOOOXXXX
+006 .....OOOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 ..O...OOOOOXXXXXX
+012 .OOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 4, Y : 4
+p->turn 63
+*
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ....XXXOOOOOXXXXX
+005 ....XOOOOOOOOXXXX
+006 .....OOOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ........OOOXXXXXX
+011 .OO...OOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 3:
+..*
+p->ch_place 2
+
+X : 5, Y : 2
+p->turn 64
+***
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ....XXXOOOOOXXXXX
+005 ....XOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO...OOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 4, Y : 3
+p->turn 65
+**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ...XXXXOOOOOXXXXX
+005 ....XOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.O.OOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO..OOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 2:
+..
+p->ch_place 2
+
+X : 4, Y : 3
+p->turn 66
+**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ...XXXXOOOOOXXXXX
+005 ...XXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 .......OOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO..OOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 .OOOOOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 6, Y : 4
+p->turn 67
+*
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 ..XXXXXOOOOXXXXXX
+004 ...XXXXOOOOOXXXXX
+005 ...XXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ....X..OOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO..OOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 2 2:
+**
+p->ch_place 2
+
+X : 3, Y : 1
+p->turn 68
+**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 ...XXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ....X.OOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO..OOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 6, Y : 3
+p->turn 69
+*
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 ...XXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ...XX.OOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO.OOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 2 2:
+.*
+p->ch_place 2
+
+X : 4, Y : 1
+p->turn 70
+**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 .XXXXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ...XXOOOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OO.OOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 2 2:
+..
+p->ch_place 2
+
+X : 6, Y : 2
+p->turn 71
+**
+Plateau 15 17:
+    01234567890123456
+000 ..XXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 .XXXXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ..XXXOOOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ......OOOOOXXXXXX
+011 .OOOOOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 0, Y : 1
+p->turn 72
+**
+Plateau 15 17:
+    01234567890123456
+000 .XXXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 ..XXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 .XXXXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ..XXXOOOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ....OOOOOOOXXXXXX
+011 .OOOOOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 2 2:
+*.
+p->ch_place 2
+
+X : 1, Y : 1
+p->turn 73
+*.
+Plateau 15 17:
+    01234567890123456
+000 .XXXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 .XXXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 .XXXXOOOOOOOOXXXX
+006 ..XXXOOOOOOOXXXXX
+007 ..XXXOOOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ....OOOOOOOXXXXXX
+011 OOOOOOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 1 2:
+p->ch_place 2
+
+X : 6, Y : 1
+p->turn 74
+**
+Plateau 15 17:
+    01234567890123456
+000 .XXXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 .XXXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 .XXXXOOOOOOOOXXXX
+006 .XXXXOOOOOOOXXXXX
+007 ..XXXOOOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 ..OOOOOOOOOXXXXXX
+011 OOOOOOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 2 1:
+*
+p->ch_place 2
+
+X : 6, Y : 1
+p->turn 75
+*
+Plateau 15 17:
+    01234567890123456
+000 .XXXXXXXXXXXXXXXX
+001 .XXXXXXXXXXXXXXXX
+002 .XXXXXXOOXXXXXXXX
+003 .XXXXXXOOOOXXXXXX
+004 .XXXXXXOOOOOXXXXX
+005 .XXXXOOOOOOOOXXXX
+006 .XXXXOOOOOOOXXXXX
+007 .XXXXOOOOOOOOOOXX
+008 ..OOO.OOOOOOOOXXX
+009 .OOOOOOOOOOXXXXXX
+010 .OOOOOOOOOOXXXXXX
+011 OOOOOOOOOOOXXXXXX
+012 OOOOOOOOOOOOXXXXX
+013 OOOOOOOOOOOOOOXXX
+014 OOOOOOOOOOOOOOOOO
+Piece 1 3:
+p->ch_place 2
+***

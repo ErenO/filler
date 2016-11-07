@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/05 00:25:54 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/07 12:04:39 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 typedef struct		s_p
 {
+	int		ch_place;
 	int		turn;
 	int		algo_x;
 	int		algo_y;
@@ -39,6 +40,7 @@ typedef struct		s_p
 int			ft_check_piece_exceed_bottom_map(char *piece, int index_l);
 int			ft_check_piece_exceed_right_map(char *piece, int index_w,
 	int width);
+void	ft_find_character_place(t_p *p);
 void		init_struct_p(t_p *p);
 void		ft_map_size(char *line, t_p *p);
 void		ft_piece_big_size(char *line, t_p *p);

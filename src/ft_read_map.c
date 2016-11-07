@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/03 15:54:35 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/07 13:00:41 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int		game_player(char *line, t_p *p)
 	if (line[10] == '1')
 	{
 		p->ch = 'O';
-		p->opp = 'x';
+		p->opp = 'X';
 		return (1);
 	}
 	else
 	{
 		p->ch = 'X';
-		p->opp = 'o';
+		p->opp = 'O';
 		return (0);
 	}
 }
@@ -111,6 +111,8 @@ void	ft_stock_piece(char *line, t_p *p)
 		p->ptr = ft_strnew(0);
 	if (p->put_line == 0)
 	{
+		if (p->turn == 0)
+			ft_find_character_place(p);
 		ret = ft_find_out_place(p);
 		p->put_line = -1;
 	}
