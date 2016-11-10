@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/10 14:17:00 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/10 21:27:09 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,6 @@ int ft_big_map(t_p *p)
 	}
 	else if (p->ch_place == 2)
 	{
-		// if (p->turn < 10)
-		// 	return (!ft_algo_middle_top(p)) ? ft_algo_top_left(p) : 1;
-		// if (p->turn > 200 && p->turn < 300)
-		// {
-		// 	return (!ft_algo_middle_top(p)) ? ft_algo_top_left(p) : 1;
-		// }
 		if (p->turn % 2 == 0 && p->turn < 150)
 			return (ft_algo_top_right(p));
 		else
@@ -82,29 +76,12 @@ int ft_big_map(t_p *p)
 						return (!ft_algo_middle_top(p)) ? ft_algo_bottom(p) : 1;
 			}
 		}
-
-			// if (p->turn < 30)
-			// 	return (ft_algo_left(p));
-			// if (p->turn < 50)
-			// 	return (ft_algo_top_left(p));
-			// if (p->turn % 2 == 0)
-			// 	return (ft_algo_top_left(p));
-			// else
-			// 	return (ft_algo_right(p));
-			// if (p->turn < 50)
-			// 	return (ft_algo_top_left(p));
-			// if (p->turn < 100)
-			// if (p->turn % 2 == 0)
-			// else
-			// 	return (ft_algo_top_left(p));
-			// if (p->turn % 2 == 0)
-			// {
-			// 	return (ft_algo_top_left(p));
-			// }
-			// else
-			// {
-			// 	return (ft_algo_bottom(p));
-			// }
+		// if (p->turn > 200 && p->turn < 500)
+		// 	return (!ft_algo_middle_right(p)) ? ft_algo_left(p) : 1;
+		// if (p->turn % 2 == 0)
+		// 	return (ft_algo_left(p));
+		// else
+			// return (ft_algo_bottom(p));
 	}
 	return (0);
 }
