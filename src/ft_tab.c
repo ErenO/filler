@@ -3,58 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tab.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/07 12:12:17 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/10 13:50:00 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
-
-void	ft_error()
-{
-	write(1, "ERROR\n", 6);
-	exit(0);
-}
-
-int 	ft_check_piece_exceed_bottom_map(char *piece, int index_l)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (j < index_l && piece[i] != 0)
-	{
-		if (piece[i] == '\n')
-			j++;
-		i++;
-	}
-	while (piece[i] != 0)
-	{
-	 	if (piece[i] == '*')
-			return (0);
-		i += 1;
-	}
-	return (1);
-}
-
-int 	ft_check_piece_exceed_right_map(char *piece, int index_w, int width)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (piece[i] != 0)
-	{
-		if (piece[i] == '*' && i % width >= index_w)
-			return (0);
-		i += 1;
-	}
-	return (1);
-}
 
 int ft_algo_left(t_p *p)
 {
@@ -128,7 +84,7 @@ int 	ft_algo_middle_top(t_p *p)
 	ret = 0;
 	while (x < p->line_map)
 	{
-		y = 0;
+		y = p->col_map / 2 - 1;
 		while (y < p->col_map)
 		{
 			ret = ft_check_piece(p, x, y);

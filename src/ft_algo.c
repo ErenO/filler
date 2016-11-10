@@ -6,13 +6,41 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/09 16:32:09 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/10 14:17:00 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
+static int ft_algo_middle_right(t_p *p)
+{
+		int x;
+		int y;
+		int ret;
 
+		x = 0;
+		y = p->col_map/ 4;
+		ret = 0;
+		while (y >= 0)
+		{
+			x = 0;
+			while (x < p->line_map)
+			{
+				ret = ft_check_piece(p, x, y);
+				if (ret == 1)
+				{
+					ft_put_solve(p ,x , y);
+					return (1);
+				}
+				else if (ret == 2)
+					return (0);
+				x++;
+			}
+			y--;
+		}
+		ft_putstr("0 0\n");
+		return (0);
+}
 int ft_big_map(t_p *p)
 {
 	if (p->ch_place == 1)
@@ -31,10 +59,52 @@ int ft_big_map(t_p *p)
 	}
 	else if (p->ch_place == 2)
 	{
-			if (p->turn % 2 == 0)
-				return (ft_algo_top_left(p));
-			else
+		// if (p->turn < 10)
+		// 	return (!ft_algo_middle_top(p)) ? ft_algo_top_left(p) : 1;
+		// if (p->turn > 200 && p->turn < 300)
+		// {
+		// 	return (!ft_algo_middle_top(p)) ? ft_algo_top_left(p) : 1;
+		// }
+		if (p->turn % 2 == 0 && p->turn < 150)
+			return (ft_algo_top_right(p));
+		else
+		{
+			if (p->turn < 200)
 				return (ft_algo_left(p));
+			else
+			{
+				if (p->turn % 2 == 0)
+				{
+
+					return (!ft_algo_middle_right(p)) ? ft_algo_left(p) : 1;
+				}
+				else
+						return (!ft_algo_middle_top(p)) ? ft_algo_bottom(p) : 1;
+			}
+		}
+
+			// if (p->turn < 30)
+			// 	return (ft_algo_left(p));
+			// if (p->turn < 50)
+			// 	return (ft_algo_top_left(p));
+			// if (p->turn % 2 == 0)
+			// 	return (ft_algo_top_left(p));
+			// else
+			// 	return (ft_algo_right(p));
+			// if (p->turn < 50)
+			// 	return (ft_algo_top_left(p));
+			// if (p->turn < 100)
+			// if (p->turn % 2 == 0)
+			// else
+			// 	return (ft_algo_top_left(p));
+			// if (p->turn % 2 == 0)
+			// {
+			// 	return (ft_algo_top_left(p));
+			// }
+			// else
+			// {
+			// 	return (ft_algo_bottom(p));
+			// }
 	}
 	return (0);
 }
