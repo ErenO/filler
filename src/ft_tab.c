@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tab.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 13:27:16 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/10 13:50:00 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/10 21:44:07 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int 	ft_algo_middle_top(t_p *p)
 	ret = 0;
 	while (x < p->line_map)
 	{
-		y = p->col_map / 2 - 1;
+		y = p->col_map / 4;
 		while (y < p->col_map)
 		{
 			ret = ft_check_piece(p, x, y);

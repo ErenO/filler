@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_place.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 16:27:42 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/09 16:32:03 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/11 14:37:27 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,12 @@ static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 	j = 0;
 	while (j < (p->col_piece) && p->line[(*map_place)] != 0)
 	{
-		if (p->line[(*map_place)] != '\n' && i != 1)
+		if (p->line[(*map_place)] != '\n')
 		{
 			(*count) += (p->line[(*map_place)] == p->ch && p->ptr[(*piece_place)] == '*') ? 1 : 0;
 			if (p->line[(*map_place)] == '\0')
 				return (2);
-			if ((p->line[(*map_place)] == p->opp || p->line[(*map_place)] == (p->opp + 32))
-				&& p->ptr[(*piece_place)] == '*')
+			if (p->line[(*map_place)] == p->opp && p->ptr[(*piece_place)] == '*')
 				return (0);
 			if (((j + p->col_piece) > p->col_map && p->ptr[(*piece_place)] == '*'))
 				return (0);
