@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/10 21:47:43 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/11 17:20:46 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ int ft_big_map(t_p *p)
 			{
 				if (p->turn % 2 == 0)
 				{
-
 					return (!ft_algo_middle_right(p)) ? ft_algo_left(p) : 1;
 				}
 				else

@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 16:27:42 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/11 16:46:53 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/11 17:04:15 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,18 +82,22 @@ static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 			(*count) += (p->line[(*map_place)] == p->ch && p->ptr[(*piece_place)] == '*') ? 1 : 0;
 			if (p->line[(*map_place)] == '\0')
 			{
+				dprintf(2, "a");
 				return (2);
 			}
 			if (p->line[(*map_place)] == p->opp && p->ptr[(*piece_place)] == '*')
 			{
+				dprintf(2, "b");
 				return (0);
 			}
 			if (((j + p->col_piece) > p->col_map && p->ptr[(*piece_place)] == '*'))
 			{
+				dprintf(2, "c");
 				return (0);
 			}
 			if (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '*')
 			{
+				dprintf(2, "d");
 				return (0);
 			}
 			(*map_place) += 1;
@@ -140,6 +144,6 @@ int		ft_check_piece(t_p *p, int x, int y)
 		}
 			i++;
 	}
-	dprintf(2, "X %d, Y%d, count%d\n", x, y, count); 
+	dprintf(2, "X %d, Y%d, count%d\n", x, y, count);
 	return (count == 1) ? 1 : 0;
 }
