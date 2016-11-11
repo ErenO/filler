@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   filler.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/09 15:58:39 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/11 22:33:50 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 typedef struct		s_p
 {
+	int		x;
+	int		y;
 	int		ch_place;
 	int		turn;
 	int		put_line;

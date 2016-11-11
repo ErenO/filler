@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_place.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 16:27:42 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/11 17:04:15 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/11 23:51:01 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,25 +79,29 @@ static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 	{
 		if (p->line[(*map_place)] != '\n')
 		{
+			if (p->ptr[(*piece_place)] == '*')
+			{
+				dprintf(2, "* %c ", p->line[(*map_place)]);
+			}
 			(*count) += (p->line[(*map_place)] == p->ch && p->ptr[(*piece_place)] == '*') ? 1 : 0;
 			if (p->line[(*map_place)] == '\0')
 			{
-				dprintf(2, "a");
+				dprintf(2, "a j%d ", j);
 				return (2);
 			}
 			if (p->line[(*map_place)] == p->opp && p->ptr[(*piece_place)] == '*')
 			{
-				dprintf(2, "b");
+				dprintf(2, "b j%d ", j);
 				return (0);
 			}
-			if (((j + p->col_piece) > p->col_map && p->ptr[(*piece_place)] == '*'))
+			if (((j + p->y) > p->col_map && p->ptr[(*piece_place)] == '*'))
 			{
-				dprintf(2, "c");
+				dprintf(2, "c j%d p->col_piece %d ", j, p->col_piece);
 				return (0);
 			}
 			if (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '*')
 			{
-				dprintf(2, "d");
+				dprintf(2, "d j%d ", j);
 				return (0);
 			}
 			(*map_place) += 1;
@@ -125,6 +129,8 @@ int		ft_check_piece(t_p *p, int x, int y)
 	count = 0;
 	map_place = (p->col_map + 1) * x;
 	piece_place = 0;
+	p->x = x;
+	p->y = y;
 	i = (p->line_map + p->line_piece) - (x + p->line_piece);
 	if (i > 0 && ft_check_piece_exceed_bottom_map(p->ptr, i) == 0)
 		return (0);
@@ -144,6 +150,7 @@ int		ft_check_piece(t_p *p, int x, int y)
 		}
 			i++;
 	}
-	dprintf(2, "X %d, Y%d, count%d\n", x, y, count);
+	if (count > 0)
+		dprintf(2, "X %d, Y%d, count%d\n", x, y, count);
 	return (count == 1) ? 1 : 0;
 }

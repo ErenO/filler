@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/09 16:00:39 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/11 22:34:13 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void		init_struct_p(t_p *p)
 {
+	p->x = 0;
+	p->y = 0;
 	p->ch_place = 0;
 	p->turn = 0;
 	p->line_map = 0;
