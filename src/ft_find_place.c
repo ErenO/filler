@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_place.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 16:27:42 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/11 23:51:01 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/13 20:40:50 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int 	ft_check_piece_exceed_bottom_map(char *piece, int index_l)
+int		ft_check_piece_exceed_bottom_map(char *piece, int index_l)
 {
 	int i;
 	int j;
@@ -27,14 +27,14 @@ int 	ft_check_piece_exceed_bottom_map(char *piece, int index_l)
 	}
 	while (piece[i] != 0)
 	{
-	 	if (piece[i] == '*')
+		if (piece[i] == '*')
 			return (0);
 		i += 1;
 	}
 	return (1);
 }
 
-int 	ft_check_piece_exceed_right_map(char *piece, int index_w, int width)
+int		ft_check_piece_exceed_right_map(char *piece, int index_w, int width)
 {
 	int i;
 	int j;
@@ -68,50 +68,28 @@ void	ft_find_character_place(t_p *p)
 	}
 }
 
-static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
+int		ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 {
-	int i;
 	int j;
 
-	i = 0;
 	j = 0;
 	while (j < (p->col_piece) && p->line[(*map_place)] != 0)
 	{
 		if (p->line[(*map_place)] != '\n')
 		{
-			if (p->ptr[(*piece_place)] == '*')
-			{
-				dprintf(2, "* %c ", p->line[(*map_place)]);
-			}
-			(*count) += (p->line[(*map_place)] == p->ch && p->ptr[(*piece_place)] == '*') ? 1 : 0;
+			(*count) += (p->line[(*map_place)] == p->ch
+			&& p->ptr[(*piece_place)] == '*') ? 1 : 0;
 			if (p->line[(*map_place)] == '\0')
-			{
-				dprintf(2, "a j%d ", j);
 				return (2);
-			}
-			if (p->line[(*map_place)] == p->opp && p->ptr[(*piece_place)] == '*')
-			{
-				dprintf(2, "b j%d ", j);
+			if (p->line[(*map_place)] == p->opp
+			&& p->ptr[(*piece_place)] == '*')
 				return (0);
-			}
 			if (((j + p->y) > p->col_map && p->ptr[(*piece_place)] == '*'))
-			{
-				dprintf(2, "c j%d p->col_piece %d ", j, p->col_piece);
 				return (0);
-			}
 			if (p->line[(*map_place)] == '\n' && p->ptr[(*piece_place)] == '*')
-			{
-				dprintf(2, "d j%d ", j);
 				return (0);
-			}
 			(*map_place) += 1;
 		}
-		// else
-		// {
-		// 	i = 1;
-		// 	if (p->ptr[(*piece_place)] == '*')
-		// 		return (0);
-		// }
 		(*piece_place) += 1;
 		j++;
 	}
@@ -121,7 +99,6 @@ static int 	ft_curse_ok(t_p *p, int *count, int *map_place, int *piece_place)
 int		ft_check_piece(t_p *p, int x, int y)
 {
 	int i;
-	int j;
 	int count;
 	int map_place;
 	int piece_place;
@@ -129,28 +106,20 @@ int		ft_check_piece(t_p *p, int x, int y)
 	count = 0;
 	map_place = (p->col_map + 1) * x;
 	piece_place = 0;
-	p->x = x;
-	p->y = y;
 	i = (p->line_map + p->line_piece) - (x + p->line_piece);
 	if (i > 0 && ft_check_piece_exceed_bottom_map(p->ptr, i) == 0)
 		return (0);
-	j = (p->col_map + p->col_piece) - (y + p->col_piece);
-	if (j > 0 && ft_check_piece_exceed_right_map(p->ptr, j, p->col_piece + 1) == 0)
+	i = (p->col_map + p->col_piece) - (y + p->col_piece);
+	if (i > 0 && !ft_check_piece_exceed_right_map(p->ptr, i, p->col_piece + 1))
 		return (0);
 	i = 0;
 	while (i < p->line_piece && (i + p->line_piece) <= p->line_map)
 	{
-		j = 0;
 		map_place = y + ((p->col_map + 1) * (x + i));
 		piece_place = ((p->col_piece + 1) * i);
 		if (ft_curse_ok(p, &count, &map_place, &piece_place) != 1)
-		{
-			dprintf(2, "X %d, Y%d, return 0\n", x, y);
 			return (0);
-		}
-			i++;
+		i++;
 	}
-	if (count > 0)
-		dprintf(2, "X %d, Y%d, count%d\n", x, y, count);
 	return (count == 1) ? 1 : 0;
 }

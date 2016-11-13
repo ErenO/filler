@@ -6,12 +6,13 @@
 #    By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 16:11:28 by eozdek            #+#    #+#              #
-#    Updated: 2016/11/10 11:38:35 by eozdek           ###   ########.fr        #
+#    Updated: 2016/11/13 21:30:53 by eozdek           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= filler
-FILES	= get_next_line.c main.c ft_find_place.c ft_read_map.c ft_tab.c ft_algo.c
+FILES	= get_next_line.c main.c ft_find_place.c ft_read_map.c ft_algo_map_place.c \
+ft_map_size.c ft_algo_middle.c
 SRCS	= $(addprefix src/, $(FILES))
 OBJS	= $(SRCS:src/%.c=.obj/%.o)
 INC		= -I includes -I libft/includes

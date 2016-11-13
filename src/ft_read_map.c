@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/16 16:59:54 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/12 00:24:22 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/13 17:56:01 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
-
-/*
-** Connaitre quel caractère on utilise
-*/
 
 int		game_player(char *line, t_p *p)
 {
@@ -32,10 +28,6 @@ int		game_player(char *line, t_p *p)
 	}
 }
 
-/*
-** Connaitre la taille de la map
-*/
-
 void	ft_map_size(char *line, t_p *p)
 {
 	int j;
@@ -46,10 +38,6 @@ void	ft_map_size(char *line, t_p *p)
 		j++;
 	p->col_map = ft_atoi(line + j);
 }
-
-/*
-** Connaitre la taille de la piece
-*/
 
 void	ft_piece_big_size(char *line, t_p *p)
 {
@@ -65,10 +53,6 @@ void	ft_piece_big_size(char *line, t_p *p)
 		p->col_piece = ft_atoi(line + j);
 	}
 }
-
-/*
-** stocker la map dans p->line
-*/
 
 void	ft_stock_map(char *line, t_p *p)
 {
@@ -87,10 +71,6 @@ void	ft_stock_map(char *line, t_p *p)
 	}
 }
 
-/*
-** stocker la piece dans p->ptr et appeler l'algo
-*/
-
 void	ft_stock_piece(char *line, t_p *p)
 {
 	int ret;
@@ -100,21 +80,21 @@ void	ft_stock_piece(char *line, t_p *p)
 	ret = 0;
 	if (p->check_map == 1)
 		p->piece_size--;
-	if (p->put_line > 0)
+	if (p->nb_line > 0)
 	{
-		p->put_line--;
+		p->nb_line--;
 		p->ptr = ft_strjoin(p->ptr, ft_strjoin(line, "\n"));
 	}
-	if (ft_strncmp(line, "Piece", 5) == 0 && p->put_line == -1)
-		p->put_line = p->line_piece;
+	if (ft_strncmp(line, "Piece", 5) == 0 && p->nb_line == -1)
+		p->nb_line = p->line_piece;
 	if (p->ptr == NULL)
 		p->ptr = ft_strnew(0);
-	if (p->put_line == 0)
+	if (p->nb_line == 0)
 	{
 		if (p->turn == 0)
 			ft_find_character_place(p);
 		ret = ft_find_out_place(p);
-		p->put_line = -1;
+		p->nb_line = -1;
 	}
 	if (ret == 1)
 		p->check_map = 0;

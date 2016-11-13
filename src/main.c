@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/11 22:34:13 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/13 21:14:31 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,32 @@ void		init_struct_p(t_p *p)
 	p->ptr = ft_strnew(0);
 	p->line = ft_strnew(0);
 	p->piece_size = 0;
-	p->put_line = -1;
+	p->nb_line = -1;
 }
 
-int	main(void)
+struct				s_sdl
+{
+	int				u;
+	int				aff;
+	int				speed;
+	char			*fontname;
+	SDL_Rect		solid_rect;
+	SDL_Rect		last_rect[3];
+	SDL_Window		*window;
+	SDL_Renderer	*renderer;
+	TTF_Font		*font;
+	SDL_Rect		texture_rect[10];
+	SDL_Rect		rect_player[4][3];
+	SDL_Texture		*solid_texture;
+	SDL_Texture		*last_tex[3];
+	SDL_Texture		*texture_tab[10];
+	SDL_Texture		*tex_play[4][3];
+	SDL_Surface		*player[4][3];
+	SDL_Event		event;
+	SDL_Rect		rect[4096];
+};
+
+int			main(void)
 {
 	t_p		*p;
 	char	*line;
@@ -52,7 +74,6 @@ int	main(void)
 			ft_stock_map(line, p);
 			ft_stock_piece(line, p);
 		}
-		dprintf(2, "%s\n", line);
 		i++;
 		j = 0;
 	}
