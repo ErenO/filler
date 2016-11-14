@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/13 21:14:31 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/14 21:22:00 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,28 +31,6 @@ void		init_struct_p(t_p *p)
 	p->nb_line = -1;
 }
 
-struct				s_sdl
-{
-	int				u;
-	int				aff;
-	int				speed;
-	char			*fontname;
-	SDL_Rect		solid_rect;
-	SDL_Rect		last_rect[3];
-	SDL_Window		*window;
-	SDL_Renderer	*renderer;
-	TTF_Font		*font;
-	SDL_Rect		texture_rect[10];
-	SDL_Rect		rect_player[4][3];
-	SDL_Texture		*solid_texture;
-	SDL_Texture		*last_tex[3];
-	SDL_Texture		*texture_tab[10];
-	SDL_Texture		*tex_play[4][3];
-	SDL_Surface		*player[4][3];
-	SDL_Event		event;
-	SDL_Rect		rect[4096];
-};
-
 int			main(void)
 {
 	t_p		*p;
@@ -66,6 +44,7 @@ int			main(void)
 	init_struct_p(p);
 	while (get_next_line(0, &line) == 1)
 	{
+		dprintf(2, "%s\n", line);
 		i == 0 ? game_player(line, p) : 0;
 		i == 1 ? ft_map_size(line, p) : "";
 		if (i > 2)

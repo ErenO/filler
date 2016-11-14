@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map_size.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
+/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/13 20:39:17 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/14 22:51:41 by erenozdek        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int		ft_small_map(t_p *p)
 		if (p->turn < 10)
 			return (ft_algo_bottom_right(p));
 		if (p->turn % 2 == 0)
-			return (ft_algo_bottom(p));
+			return (ft_algo_top_right(p));
 		else
 			return (ft_algo_right(p));
 	}
@@ -99,6 +99,7 @@ int		ft_small_map(t_p *p)
 int		ft_put_solve(t_p *p, int x, int y)
 {
 	p->turn++;
+	dprintf(2, "p->turn %d\np->ch_place %d\n", p->turn, p->ch_place);
 	ft_putnbr(x);
 	ft_putchar(' ');
 	ft_putnbr(y);
