@@ -6,7 +6,7 @@
 /*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/14 22:51:41 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/17 13:00:53 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ int		ft_big_map(t_p *p)
 				return (ft_algo_top_left(p));
 			if (p->turn % 2 == 0)
 				return (ft_algo_bottom(p));
-			else
-				return (ft_algo_right(p));
+			return (ft_algo_right(p));
 		}
-		else
-			return (!ft_algo_middle_bottom(p)) ? ft_algo_right(p) : 1;
+		return (!ft_algo_middle_bottom(p)) ? ft_algo_right(p) : 1;
 	}
 	else if (p->ch_place == 2)
 	{
@@ -38,8 +36,7 @@ int		ft_big_map(t_p *p)
 			return (ft_algo_left(p));
 		if (p->turn % 2 == 0)
 			return (!ft_algo_middle_right(p)) ? ft_algo_left(p) : 1;
-		else
-			return (!ft_algo_middle_top(p)) ? ft_algo_bottom(p) : 1;
+		return (!ft_algo_middle_top(p)) ? ft_algo_bottom(p) : 1;
 	}
 	return (0);
 }
