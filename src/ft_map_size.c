@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map_size.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/21 10:52:19 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/17 13:00:53 by eozdek           ###   ########.fr       */
+/*   Updated: 2016/11/20 23:13:32 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,11 @@ int		ft_middle_map(t_p *p)
 			return (ft_algo_top_left(p));
 		if (p->turn < 100)
 			return (ft_algo_right(p));
-		if (p->turn < 200)
-			return (ft_algo_bottom(p));
 		if (p->turn >= 200)
 			return (ft_algo_left(p));
+		if (!(p->turn % 2))
+			return (ft_algo_middle_right(p)) ? 1 : ft_algo_bottom(p);
+		return (ft_algo_bottom(p));
 	}
 	else if (p->ch_place == 2)
 	{
@@ -64,8 +65,7 @@ int		ft_middle_map(t_p *p)
 			return (ft_algo_left(p));
 		if (p->turn % 2 == 0)
 			return (ft_algo_top_right(p));
-		else
-			return (ft_algo_left(p));
+		return (ft_algo_left(p));
 	}
 	return (0);
 }
