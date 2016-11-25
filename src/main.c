@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erenozdek <erenozdek@student.42.fr>        +#+  +:+       +#+        */
+/*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:06:07 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/14 21:22:00 by erenozdek        ###   ########.fr       */
+/*   Updated: 2016/11/25 17:11:50 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,8 @@ int			main(void)
 	t_p		*p;
 	char	*line;
 	int		i;
-	int		j;
 
 	i = 0;
-	j = 8;
 	p = (t_p *)malloc(sizeof(t_p));
 	init_struct_p(p);
 	while (get_next_line(0, &line) == 1)
