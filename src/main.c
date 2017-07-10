@@ -52,7 +52,7 @@ int			main(void)
 			ft_stock_piece(line, p);
 		}
 		i++;
-		j = 0;
+		//		j = 0;
 	}
 	free(p);
 	return (0);

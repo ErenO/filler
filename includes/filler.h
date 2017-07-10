@@ -6,7 +6,7 @@
 /*   By: eozdek <eozdek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/29 02:11:17 by eozdek            #+#    #+#             */
-/*   Updated: 2016/11/17 12:58:43 by eozdek           ###   ########.fr       */
+/*   Updated: 2017/07/10 18:04:55 by eozdek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct	s_p
 	int			**tab;
 	int			piece_size;
 	int			check_map;
+	int			ce[4];
 	char		ch;
 	char		opp;
 	char		*ptr;
